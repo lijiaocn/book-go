@@ -3,7 +3,7 @@ layout: default
 title: 02-lexical-elements
 author: lijiaocn
 createdate: 2017/12/16 17:58:54
-changedate: 2017/12/16 21:04:01
+changedate: 2017/12/16 21:15:01
 categories:
 tags:
 keywords:
@@ -14,21 +14,21 @@ description:
 * auto-gen TOC:
 {:toc}
 
-# go语言的词汇 
+# go语言的词法规则
 
 英语有单词，汉语有词语，编程语言也有自己的词汇。
 
 很多工作多年的程序员都没有从语言的层面了解自己正在使用的程序语言。这不应当被批评谴责，`程序语言设计`是一个大牛云集的小众领域，而程序员是使用程序语言的芸芸大众。
 
-绝大多数程序员的任务使用程序语言开发出软件，而不是设计程序语言，正如厨师的任务是做出美味佳肴，而不是制作锅碗瓢盆和生产原材料。
+绝大多数程序员的任务是使用程序语言开发出软件，而不是设计程序语言，正如厨师的任务是做出美味佳肴，而不是制作锅碗瓢盆和生产原材料。
 
 但，了解一下还是有好处的，能够从更高的层面、更抽象的看问题，这很重要。
 
-## 构成要素
+## 构成要素：字符(Characters)、字母(Letters)、数字(Digits)
 
 英语单词的构成要素是字母，汉语词语的构成要素是字，go语言词汇的构成要素是字符。
 
-### 最小单位：字符(Characters)
+### 字符(Characters)
 
 go语言用utf-8编码，它完全是由下面的字符(Characters)组成的。
 
@@ -37,16 +37,14 @@ go语言用utf-8编码，它完全是由下面的字符(Characters)组成的。
 	unicode_letter = /* a Unicode code point classified as "Letter" */ .
 	unicode_digit  = /* a Unicode code point classified as "Number, decimal digit" */ .
 
-### 次小单位：单词与数字(Letters and digits)
+### 字母(Letters)、数字(Digits)
 
-单词(letter)与数字(digit)是go语言中次小的单位。
+go语言将部分utf-8字符称为字母(letter)与数字(digit)。
 
 	letter        = unicode_letter | "_" .
 	decimal_digit = "0" … "9" .
 	octal_digit   = "0" … "7" .
 	hex_digit     = "0" … "9" | "A" … "F" | "a" … "f" .
-
-在后面的语法格式中，会用到这四个次小单位。
 
 ## 注释(Comments)
 
@@ -127,7 +125,7 @@ go的标识符语法格式如下：
 
 注意，没有2进制的表示方式。
 
-注意，`decimal_digit`的定义在前面章节`次小单位：单词与数字(Letters and digits)`中给出了定义。后面再遇到前面已经定义的语法时，不再提示。
+注意，`decimal_digit`前面章节中给出的数字，后面再遇到前面已经定义的词法时，不再提示。
 
 在十六进制表示方式中，大写字母与小写字母的含义是相同的。
 
@@ -287,4 +285,3 @@ godoc中给出的rune literal：
 1. [go Lexical elements][1]
 
 [1]: http://127.0.0.1:6060/ref/spec#Lexical_elements  "go Lexical elements" 
-
