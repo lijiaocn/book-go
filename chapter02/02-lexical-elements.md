@@ -3,7 +3,7 @@ layout: default
 title: 02-lexical-elements
 author: lijiaocn
 createdate: 2017/12/16 17:58:54
-changedate: 2017/12/16 21:15:01
+changedate: 2017/12/16 22:57:23
 categories:
 tags:
 keywords:
@@ -13,6 +13,8 @@ description:
 
 * auto-gen TOC:
 {:toc}
+
+[TOC]
 
 # go语言的词法规则
 
