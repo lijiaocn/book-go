@@ -7,3 +7,4 @@
 	* [IDE]( ./chapter01/03-ide.md )
 * [第二章 语法概览]( ./chapter02/00-about.md )
 	* [目标与编码]( ./chapter02/01-purpose.md )
+	* [语言词汇]( ./chapter02/02-lexical-elements.md )
