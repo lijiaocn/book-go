@@ -3,7 +3,7 @@ layout: default
 title: 02-godoc
 author: lijiaocn
 createdate: 2017/12/16 15:39:52
-changedate: 2017/12/16 16:41:58
+changedate: 2017/12/16 16:44:54
 categories:
 tags:
 keywords:
@@ -16,7 +16,7 @@ description:
 
 # 使用godoc
 
-godoc是go提供的一个命令，提供了可以在本地浏览的go文档。
+godoc是go的一个命令，提供了可以在本地浏览的go文档。
 
 ## 安装
 
