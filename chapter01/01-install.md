@@ -1,6 +1,19 @@
+---
+layout: default
+title: 01-install
+author: lijiaocn
+createdate: 2017/12/16 15:39:52
+changedate: 2017/12/16 16:24:54
+categories:
+tags:
+keywords:
+description: 
+
+---
+
 # 安装Go
 
-下面是在linux系统上安装go的步骤。
+下面是在linux系统上安装go的步骤，在mac上安装也是类似的过程。
 
 ## 下载软件包
 
@@ -75,9 +88,10 @@ go命令位于`/opt/go/1.9.2/bin/`目录中：
 	$ go version
 	go version go1.4.2 linux/amd64
 
-## 在mac上安装
+## 参考
 
-在mac上安装也是一样的方式，将命令解压到
+1. [golang.org download][1]
+2. [golangtc.com download][2]
 
 [1]: https://golang.org/dl/ "golang.org download"
 [2]: https://www.golangtc.com/download "golangtc.com download"

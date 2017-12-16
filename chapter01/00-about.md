@@ -1,3 +1,20 @@
+---
+layout: default
+title: 00-about
+author: lijiaocn
+createdate: 2017/12/16 15:39:52
+changedate: 2017/12/16 16:14:40
+categories:
+tags:
+keywords:
+description: 
+
+---
+
+* auto-gen TOC:
+{:toc}
+
+
 # 第一章 学会看一手资料
 
 >一手的资料，可能会很难懂，特别是对于完全零基础的人。
