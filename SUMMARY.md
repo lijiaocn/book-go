@@ -8,4 +8,5 @@
 * [第二章 语法概览]( ./chapter02/00-about.md )
 	* [设计目标]( ./chapter02/01-purpose.md )
 	* [词法规则]( ./chapter02/02-lexical-elements.md )
+	* [常量变量]( ./chapter02/03-constants-and-variables.md )
 	* [示例代码]( ./chapter02/99-examples.md )

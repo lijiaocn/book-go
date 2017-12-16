@@ -3,7 +3,7 @@ layout: default
 title: 99-examples
 author: lijiaocn
 createdate: 2017/12/16 23:16:46
-changedate: 2017/12/16 23:33:30
+changedate: 2017/12/16 23:40:45
 categories:
 tags:
 keywords:
@@ -43,17 +43,17 @@ codes:
 	
 	func main() {
 	
-	    raw1 := "日本語"                                  // UTF-8 input text
-	    raw2 := `日本語`                                  // UTF-8 input text as a raw literal
-	    raw3 := "\u65e5\u672c\u8a9e"                   // the explicit Unicode code points
-	    raw4 := "\U000065e5\U0000672c\U00008a9e"       // the explicit Unicode code points
-	    raw5 := "\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e" // the explicit UTF-8 bytes
+	    str1 := "日本語"                                  // UTF-8 input text
+	    str2 := `日本語`                                  // UTF-8 input text as a raw literal
+	    str3 := "\u65e5\u672c\u8a9e"                   // the explicit Unicode code points
+	    str4 := "\U000065e5\U0000672c\U00008a9e"       // the explicit Unicode code points
+	    str5 := "\xe6\x97\xa5\xe6\x9c\xac\xe8\xaa\x9e" // the explicit UTF-8 bytes
 	
-	    println(raw1)
-	    println(raw2)
-	    println(raw3)
-	    println(raw4)
-	    println(raw5)
+	    println(str1)
+	    println(str2)
+	    println(str3)
+	    println(str4)
+	    println(str5)
 	}
 
 output:
