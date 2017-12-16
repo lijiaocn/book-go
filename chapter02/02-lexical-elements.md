@@ -3,7 +3,7 @@ layout: default
 title: 02-lexical-elements
 author: lijiaocn
 createdate: 2017/12/16 17:58:54
-changedate: 2017/12/16 22:57:23
+changedate: 2017/12/16 23:22:48
 categories:
 tags:
 keywords:
@@ -14,8 +14,6 @@ description:
 * auto-gen TOC:
 {:toc}
 
-[TOC]
-
 # go语言的词法规则
 
 英语有单词，汉语有词语，编程语言也有自己的词汇。
@@ -25,6 +23,8 @@ description:
 绝大多数程序员的任务是使用程序语言开发出软件，而不是设计程序语言，正如厨师的任务是做出美味佳肴，而不是制作锅碗瓢盆和生产原材料。
 
 但，了解一下还是有好处的，能够从更高的层面、更抽象的看问题，这很重要。
+
+go语言使用的编码是utf-8，用go语言写的源代码是utf-8编码的文本文件。
 
 ## 构成要素：字符(Characters)、字母(Letters)、数字(Digits)
 
