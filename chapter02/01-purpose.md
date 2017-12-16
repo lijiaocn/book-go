@@ -3,7 +3,7 @@ layout: default
 title: 01-purpose
 author: lijiaocn
 createdate: 2017/12/16 17:27:21
-changedate: 2017/12/16 23:06:23
+changedate: 2017/12/16 23:36:24
 categories:
 tags:
 keywords:
@@ -16,9 +16,9 @@ description:
 
 # 设计目标
 
->Go is a general-purpose language designed with systems programming in mind. It is strongly typed and garbage-collected and has explicit support for concurrent programming. Programs are constructed from packages, whose properties allow efficient management of dependencies. The existing implementations use a traditional compile/link model to generate executable binaries. 
-
 go语言的设计目标是`通用`的`系统`编程语言。
+
+>Go is a general-purpose language designed with systems programming in mind. It is strongly typed and garbage-collected and has explicit support for concurrent programming. Programs are constructed from packages, whose properties allow efficient management of dependencies. The existing implementations use a traditional compile/link model to generate executable binaries. 
 
 通用，意味着可以用go语言做很多事情，不受领域的限制。可以用它来写后台程序、应用程序，也可以用来做数据处理、分析决策。与通用相对的是`专用`，例如matlab也是一门编程语言，但它只能用来做数据处理。相比之下go语言可以做的事情丰富多了，但go可以做不等于它做的更好，譬如要做数据统计处理，还是用matlab、R等语言合适。
 
