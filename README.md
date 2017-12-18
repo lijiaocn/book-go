@@ -23,3 +23,9 @@
 	# mkdir -p /opt/go/1.9.2
 
 命令执行的结果前面既没有`$ `，也没有`# `。
+
+## 阅读
+
+可以通过[https://go.lijiaocn.com](https://go.lijiaocn.com)访问gitbook生成的页面。
+
+也可以直接阅读github上的[Summary]( ./SUMMARY.md )。
