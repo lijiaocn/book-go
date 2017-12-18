@@ -26,6 +26,10 @@
 
 ## 阅读
 
-可以通过[https://go.lijiaocn.com](https://go.lijiaocn.com)访问gitbook生成的页面。
+可以访问gitbook生成的页面：[https://go.lijiaocn.com](https://go.lijiaocn.com)
 
-也可以直接阅读github上的[Summary]( ./SUMMARY.md )。
+可以直接阅读github上的文件：[Summary](./SUMMARY.md)
+
+本书中的一些链接指向的本地运行的godoc，如果要打开这些连接，需要在本地运行：
+
+	godoc -http=:6060
