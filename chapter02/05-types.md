@@ -3,7 +3,7 @@ layout: default
 title: 05-types
 author: lijiaocn
 createdate: 2017/12/18 10:55:10
-changedate: 2017/12/18 14:32:09
+changedate: 2017/12/19 22:27:48
 categories:
 tags:
 keywords:
@@ -171,7 +171,7 @@ go语言内置了下面的类型：
 	    //str[6] = 'w'
 	}
 
-## Array types
+## 数组(Array types)
 
 数组是多个相同类型的值，在go中，数组必须有长度，长度是数组类型的一部分。
 
@@ -204,7 +204,7 @@ go语言内置了下面的类型：
 
 数组成员可以用从0开始的坐标索引，长度可以用内置的函数`len`获取。
 
-## Slice types
+## 分片(Slice types)
 
 分片(Slice)是用来索引数组(Array)中的一段连续的成员的。
 
@@ -285,15 +285,404 @@ go语言内置了下面的类型：
 
 	new([100]int)[0:50]
 
-## Struct types
+## 结构体(Struct types)
 
-结构体(Struct)是比较复杂的类型。
+结构体(Struct)是比较复杂的类型，它是由多个命名变量组成，这些变量每个都有名字和类型，被成为"结构体成员(field)"。
 
-## Pointer types
-## Function types
-## Interface types
-## Map types
-## Channel types
+	StructType     = "struct" "{" { FieldDecl ";" } "}" .
+	FieldDecl      = (IdentifierList Type | AnonymousField) [ Tag ] .
+	AnonymousField = [ "*" ] TypeName .
+	Tag            = string_lit .
+
+go语言的struct用法与C语言中的不同，C语言中是“struct 结构体名{ 结构体成员...}”，go语言中没有中间的结构体名。如果要给go的结构体命名，需要使用关键type：
+
+	type 结构体名 struct{
+		结构体成员
+	}
+
+结构体成员的名称可以显示声明(IdentifierList Type)，也可以隐式声明(AnonymousField)。
+
+隐式声明明是不为变量设置明确的标识符时，变量的名字默认为类型的名字。例如：
+
+	struct {
+	    T1        // field name is T1
+	    *T2       // field name is T2
+	    P.T3      // field name is T3
+	    *P.T4     // field name is T4
+	    x, y int  // field names are x and y
+	}
+
+
+go语言中的隐式声明的成员，其实有一点C++中的继承的意思，例如在下面的定义中，结构体B可以直接使用它的隐式成员A的结构体成员：
+
+	package main
+	
+	import (
+	    "fmt"
+	)
+	
+	type A struct {
+	    A1 string
+	    A2 string
+	}
+	
+	type B struct {
+	    A
+	    B1 string
+	    B2 string
+	}
+	
+	func main() {
+	    b := B{
+	        A: A{
+	            A1: "a1",
+	            A2: "a2",
+	        },
+	        B1: "b1",
+	        B2: "b2",
+	    }
+	    fmt.Println(b.A)
+	    fmt.Println(b.A.A1)
+	    fmt.Println(b.A1)
+	}
+
+在上面的代码中，结构体B没有显示声明为A1的成员，因此`b.A1`索引的是它的隐式成员A的成员。
+
+如果结构体B有一个名为A1的显示成员，那么只能通过`b.A.A1`的方式索引到A的成员A1，`b.A`索引的将是B的显示成员A1。
+
+例如下面代码中，最后一行打印的是`b1's a1`。
+
+	package main
+	
+	import (
+	    "fmt"
+	)
+	
+	type A struct {
+	    A1 string
+	    A2 string
+	}
+	
+	type B struct {
+	    A
+	    A1 string
+	    B1 string
+	    B2 string
+	}
+	
+	func main() {
+	    b := B{
+	        A: A{
+	            A1: "a1",
+	            A2: "a2",
+	        },
+	        A1: "b's a1",
+	        B1: "b1",
+	        B2: "b2",
+	    }
+	    fmt.Println(b.A)
+	    fmt.Println(b.A.A1)
+	    fmt.Println(b.A1)
+	}
+
+同一个结构体内的成员不能重名，在使用隐式声明的时候要特别注意，因为一个类型与它的指针类型，在被隐式声明的时候，会得到相同的变量名。例如下面的结构体的三个成员的名字都是`T`，这是不允许的。
+
+	struct {
+	    T     // conflicts with anonymous field *T and *P.T
+	    *T    // conflicts with anonymous field T and *P.T
+	    *P.T  // conflicts with anonymous field T and *T
+	}
+
+隐式声明的`T`和隐式声明的`*T`的区别之一是这个隐式声明的变量的存放位置。另外go语言声称：
+
+	If S contains an anonymous field T, the method sets of S and *S both include promoted methods with receiver T. The method set of *S also includes promoted methods with receiver *T.
+	
+	If S contains an anonymous field *T, the method sets of S and *S both include promoted methods with receiver T or *T.
+
+但是试验却发现，下面的两段代码执行的效果是相同的。
+
+代码一，隐式成员为`A`：
+
+	package main
+	
+	type A struct {
+	    A1 string
+	}
+	
+	type B struct {
+	    A
+	    B1 string
+	    B2 string
+	}
+	
+	func main() {
+	    b := B{
+	        A: A{
+	            A1: "a1",
+	        },
+	        B1: "b1",
+	        B2: "b2",
+	    }
+	
+	    b.method()
+	    println(b.A1)
+	
+	    b.pointer_method()
+	    println(b.A1)
+	
+	    pb := &b
+	
+	    pb.method()
+	    println(b.A1)
+	
+	    pb.pointer_method()
+	    println(b.A1)
+	}
+
+代码二，隐式成员为`*A`：
+
+	package main
+	
+	type A struct {
+	    A1 string
+	}
+	
+	func (a A) method() {
+	    a.A1 = "method set a1"
+	}
+	
+	func (a *A) pointer_method() {
+	    a.A1 = "pointer method set a1"
+	}
+	
+	type B struct {
+	    *A
+	    B1 string
+	    B2 string
+	}
+	
+	func main() {
+	    b := B{
+	        A: &A{
+	            A1: "a1",
+	        },
+	        B1: "b1",
+	        B2: "b2",
+	    }
+	
+	    b.method()
+	    println(b.A1)
+	
+	    b.pointer_method()
+	    println(b.A1)
+	
+	    pb := &b
+	
+	    pb.method()
+	    println(b.A1)
+	
+	    pb.pointer_method()
+	    println(b.A1)
+	}
+
+go语言中可以在每个结构体成员后面跟随一个标签(tag)，标签用来注明成员的属性。标签可以是解释型字符串，也可以是原始型字符串。
+
+	Tag            = string_lit .
+	string_lit     = raw_string_lit | interpreted_string_lit .
+
+另外，在结构体中还可以添加只起到填充(padding)作用的成员：
+
+	// A struct with 6 fields.
+	struct {
+	    x, y int
+	    u float32
+	    _ float32  // padding
+	    A *[]int
+	    F func()
+	}
+
+## 指针(Pointer types)
+
+指针类型比较简单：
+
+	PointerType = "*" BaseType .
+	BaseType    = Type .
+
+支持多重指针：
+
+	package main
+	
+	func main() {
+	    i := 8
+	    pi := &i
+	    ppi := &pi
+	
+	    println(*ppi, pi)
+	    println(*pi, i)
+	}
+
+## 函数(Function types)
+
+go语言的函数的声明格式与其它语言也有所不同。
+
+	FunctionType   = "func" Signature .
+	Signature      = Parameters [ Result ] .
+	Result         = Parameters | Type .
+	Parameters     = "(" [ ParameterList [ "," ] ] ")" .
+	ParameterList  = ParameterDecl { "," ParameterDecl } .
+	ParameterDecl  = [ IdentifierList ] [ "..." ] Type .
+
+可以由以下几种样式的函数：
+
+	func()
+	func(x int) int
+	func(a, _ int, z float32) bool
+	func(a, b int, z float32) (bool)
+	func(prefix string, values ...int)
+	func(a, b int, z float64, opt ...interface{}) (success bool)
+	func(int, int, float64) (float64, *[]int)
+	func(n int) func(p *T)
+
+最显著的不同是，参数的类型是在参数名之后的，如果两个参数类型相同且位置相临，可以省略前一个参数的类型，例如：
+
+	func(a, b int, z float32) (bool)
+
+函数的最后一个参数可以是变长参数(variadic)，可以对应0个到多个输入参数：
+
+	func(prefix string, values ...int)
+
+函数可以有多个返回值：
+
+	func(int, int, float64) (float64, *[]int)
+
+也可以返回函数：
+
+	func(n int) func(p *T)
+
+注意，这里给出的是函数类型，函数类型不等于函数的声明与实现，函数的声明与实现在后面章节中。
+
+## 接口(Interface types)
+
+接口类型的格式如下：
+
+	InterfaceType      = "interface" "{" { MethodSpec ";" } "}" .
+	MethodSpec         = MethodName Signature | InterfaceTypeName .
+	MethodName         = identifier .
+	InterfaceTypeName  = TypeName .
+
+例如：
+
+	interface {
+	    Read(b Buffer) bool
+	    Write(b Buffer) bool
+	    Close()
+	}
+
+接口的成员是方法(method)，一个类型只要实现一个接口中的所有方法的类型，可以作为类型为该接口的变量的的动态类型。
+
+例如下面的T就实现了上面的接口：
+
+	func (p T) Read(b Buffer) bool { return … }
+	func (p T) Write(b Buffer) bool { return … }
+	func (p T) Close() { … }
+
+一个类型可以实现多个接口的方法，也可以是空的，不包含任何的方法：
+
+	interface{}
+
+接口可以包含其它的接口，但是不能包含它自身，或者通过其它接口形成了重复包含：
+
+	// illegal: Bad cannot embed itself
+	type Bad interface {
+	    Bad
+	}
+	
+	// illegal: Bad1 cannot embed itself using Bad2
+	type Bad1 interface {
+	    Bad2
+	}
+	type Bad2 interface {
+	    Bad1
+	}
+
+## 字典(Map types)
+
+go语言原生支持字典(map)。
+
+	MapType     = "map" "[" KeyType "]" ElementType .
+	KeyType     = Type .
+
+Key的类型不能是函数(function)、字典(map)、分片(slice)
+
+如果Key的类型是接口，可以作为该接口变量的动态类型的类型必须是可比较的，否则会panic。
+
+字典中的成员数量成为字典的长度(length)，可以通过内置函数len()获取。
+
+字典的成员可以通过赋值操作增加，用Key作为index读取。
+
+如果要删除字典中的成员，需要使用内置的delete()函数。
+
+map需要使用内置函数make创建:
+
+	make(map[string]int)
+	make(map[string]int, 100)
+
+创建时指定length意思是，预先分配出可以容纳这么多成员的空间，而不是只能容纳这么多。
+
+map的长度不受创建时指定的length的限制，可以无限增加成员。
+
+	package main
+	
+	import (
+	    "fmt"
+	)
+	
+	func main() {
+	    m := make(map[int]int, 10)
+	    for i := 0; i < 10; i++ {
+	        m[i] = i
+	    }
+	    println(len(m))
+	    fmt.Println(m)
+	    m[11] = 11
+	    println(len(m))
+	    fmt.Println(m)
+	}
+
+## 通道(Channel types)
+
+通道是用来在并发编程中传递value的。
+
+	ChannelType = ( "chan" | "chan" "<-" | "<-" "chan" ) ElementType .
+
+它可以是可读、可写、既可读又可写的，例如：
+
+	chan T          // can be used to send and receive values of type T
+	chan<- float64  // can only be used to send float64s
+	<-chan int      // can only be used to receive ints
+
+<-是靠左临近的，通道类型本身也开始被传递：
+
+	chan<- chan int    // same as chan<- (chan int)
+	chan<- <-chan int  // same as chan<- (<-chan int)
+	<-chan <-chan int  // same as <-chan (<-chan int)
+	chan (<-chan int)
+
+通道类型的变量必须用内置的make函数创建：
+
+	make(chan int, 100)
+
+第二参数是指定通道中可以缓存的成员的数量，如果没有第二个参数或者第二个参数为0，那么该通道是不做缓存的，必须等对方接收或者写入完成后，才可以完成写入或接收。
+
+通道需要由写入方使用内置的close函数关闭，接收方收取了最后一个数据后，再从通道中试图读取的时候，会立即返回失败。
+
+例如，如果通道c被关闭，且通道中没有数据了，下面的ok将是false。
+
+	x, ok := <-c
+
+通道是并发安全的，使用内置函数len读取通道中缓存的数据个数，或者用cap读取通道容量，不需要考虑并发的影响。
+
+另外通道中的数据遵循先入先出的规则。
 
 ## 参考
 
