@@ -3,7 +3,7 @@ layout: default
 title: 05-types
 author: lijiaocn
 createdate: 2017/12/18 10:55:10
-changedate: 2017/12/19 22:27:48
+changedate: 2017/12/19 22:31:15
 categories:
 tags:
 keywords:
@@ -676,7 +676,7 @@ map的长度不受创建时指定的length的限制，可以无限增加成员�
 
 通道需要由写入方使用内置的close函数关闭，接收方收取了最后一个数据后，再从通道中试图读取的时候，会立即返回失败。
 
-例如，如果通道c被关闭，且通道中没有数据了，下面的ok将是false。
+例如，如果通道c被关闭，且通道中没有数据了，下面的语句将会立即返回，且ok是false。
 
 	x, ok := <-c
 
