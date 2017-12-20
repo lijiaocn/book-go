@@ -3,7 +3,7 @@ layout: default
 title: 07-expressions
 author: lijiaocn
 createdate: 2017/12/20 16:38:41
-changedate: 2017/12/20 20:12:31
+changedate: 2017/12/20 23:34:21
 categories:
 tags:
 keywords:
@@ -14,9 +14,11 @@ description:
 * auto-gen TOC:
 {:toc}
 
-# 表达式(Expressions) 与操作符(Operator)
+# 表达式(Expressions) 与运算符(Operator)
 
-表达式是用操作符和函数的描述的一个计算过程。
+## 表达式
+
+表达式是用运算符和函数的描述的一个计算过程。
 
 ### 选择表达式(Selector)
 
@@ -87,7 +89,73 @@ f可以是x的成员、方法、匿名成员、匿名成员的方法，到达f�
 
 注意q没有选择`M0()`，因为M0()的Reciver类型是`*T1`，类型Q中不能继承T1的方法。
 
-### Method expressions
+### 方法表达式(Method expressions)
+
+方法(method)表达式就是方法的实现语句。
+
+	MethodExpr    = ReceiverType "." MethodName .
+	ReceiverType  = TypeName | "(" "*" TypeName ")" | "(" ReceiverType ")" .
+
+与函数的不同的是，方法是有接收者(Receiver)的，如下：
+
+	type T struct {
+	        a int
+	}
+	func (tv  T) Mv(a int) int         { return 0 }  // value receiver
+	func (tp *T) Mp(f float32) float32 { return 1 }  // pointer receiver
+	
+	var t T
+
+方法是属于类型的，类型的方法和类型的指针的方法是不同的。
+
+类型的方法是一个将接收者作为参数传入的函数，例如在上面例子中:
+
+	T.Mv 的类型为 func(tv T, a int) int
+	T.Mp 的类型为 func(tv *T, a int) int
+
+类型的方法可以直接通过类型名调用：
+
+	T.Mv(t, 7)             //注意要传入接收者
+	(T).Mv(t, 7)
+	(*T).Mp(&t, 7)         //注意传入的是接收者是指针
+
+类型不能调用类型指针的方法，类型指针可以调用类型的方法：
+
+	T.Mp(&t,7)       //Mp是(*T)的方法，不允许T调用
+	(*T).Mv(t,7)     //Mv是T的方法，*T可以调用
+
+也可以把方法赋值给变量，然后通过变量调用:
+
+	f1 := T.Mv; f1(t, 7)         //要传入接受者t
+	f2 := (T).Mv; f2(t, 7)       //要传入接受者t
+	
+	f3 := T.Mp; f3(&t, 7)         //要传入接受者&t
+	f4 := (T).Mp; f4(&t, 7)       //要传入接受者&t
+
+也可以通过该类型的变量调用，这时候不需要传入接收者。
+
+	t.Mv(7)
+	t.Mp(7)
+
+因为变量的方法和类型的方法是不同的，所以不需要传入接收者。
+
+	t.Mv 的类型为 func(a int) int
+	t.Mp 的类型为 func(a int) int
+
+无论一个变量(t)是不是指针(类型为`*T`的变量），它都既可以调用类型(T)的方法，也可以调用类型指针(`*T`)的方法。go语言自身代为完成了取址和取值操作。
+
+变量的方法也可以存放单独的变量中，然后通过变量调用：
+
+	f := t.Mv; f(7)   // like t.Mv(7)
+	f := pt.Mp; f(7)  // like pt.Mp(7)
+	f := pt.Mv; f(7)  // like (*pt).Mv(7)
+	f := t.Mp; f(7)   // like (&t).Mp(7)
+	f := makeT().Mp   // invalid: result of makeT() is not addressable
+
+变量的类型为接口时，用同样的方式调用方法：
+
+	var i interface { M(int) } = myVal
+	f := i.M; f(7)  // like i.M(7)
 
 ### 索引表达式(Index expressions)
 
@@ -225,9 +293,9 @@ low和high超出范围时，引发panic。
 	s:= []string{"James", "Jasmine"}
 	Greeting("goodbye:", s...)
 
-## 表达式中的操作符(Operator)
+## 运算符(Operator)
 
-操作符用于构成表达式。
+运算符用于构成表达式。
 
 	Expression = UnaryExpr | Expression binary_op Expression .
 	UnaryExpr  = PrimaryExpr | unary_op UnaryExpr .
@@ -239,7 +307,7 @@ low和high超出范围时，引发panic。
 
 	unary_op   = "+" | "-" | "!" | "^" | "*" | "&" | "<-" .
 
-操作符都是go语言内置的。
+运算符都是go语言内置的。
 
 	Precedence    Operator
 	    5             *  /  %  <<  >>  &  &^
@@ -248,7 +316,7 @@ low和high超出范围时，引发panic。
 	    2             &&
 	    1             ||
 
-优先级相同的二元操作符按照先左后右的顺序结合：
+优先级相同的二元运算符按照先左后右的顺序结合：
 
 	x / y * z
 
@@ -256,7 +324,7 @@ low和high超出范围时，引发panic。
 
 	(x / y) * z
 
-### Arithmetic operators
+### 算数运算符(Arithmetic operators)
 
 	+    sum                    integers, floats, complex values, strings
 	-    difference             integers, floats, complex values
@@ -274,12 +342,12 @@ low和high超出范围时，引发panic。
 
 ### 字符串拼接(String concatenation)
 
-字符串可以用操作符"+"进行拼接：
+字符串可以用运算符"+"进行拼接：
 
 	:= "hi" + string(c)
 	s += " and good bye"
 
-### Comparison operators
+### 比较运算符(Comparison operators)
 
 	==    equal
 	!=    not equal
@@ -288,24 +356,24 @@ low和high超出范围时，引发panic。
 	>     greater
 	>=    greater or equal
 
-### Logical operators
+### 逻辑运算符(Logical operators)
 
 	&&    conditional AND    p && q  is  "if p then q else false"
 	||    conditional OR     p || q  is  "if p then true else q"
 	!     NOT                !p      is  "not p"
 
-### Address operators
+### 地址运算符(Address operators)
 
 	&     
 	*  
 
-
-### Receive operator
+### 读取运算符(Receive operator)
 
 	v1 := <-ch
 	v2 = <-ch
 	f(<-ch)
 	<-strobe  // wait until clock pulse and discard received value
 
-### Conversions
+### 类型转换(Conversions)
 
+	Conversion = Type "(" Expression [ "," ] ")" .
