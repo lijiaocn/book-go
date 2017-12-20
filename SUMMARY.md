@@ -11,4 +11,6 @@
 	* [常量]( ./chapter02/03-constants.md )
 	* [变量]( ./chapter02/04-variables.md )
 	* [类型]( ./chapter02/05-types.md )
+	* [声明]( ./chapter02/06-declarations.md)
+	* [表达式]( ./chapter02/07-expressions.md)
 	* [示例]( ./chapter02/99-examples.md )
