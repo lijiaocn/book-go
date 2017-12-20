@@ -3,7 +3,7 @@ layout: default
 title: 05-types
 author: lijiaocn
 createdate: 2017/12/18 10:55:10
-changedate: 2017/12/19 22:31:15
+changedate: 2017/12/20 11:11:51
 categories:
 tags:
 keywords:
@@ -18,7 +18,17 @@ description:
 
 类型是用来诠释如何解读指定位置中存放的数据，以及约定操作符的含义的。
 
-## 类型命名
+## 类型的属性
+
+### 内置类型(predeclared)
+
+go语言内置了下面的类型：
+
+	bool byte complex64 complex128 error float32 float64
+	int int8 int16 int32 int64 rune string
+	uint uint8 uint16 uint32 uint64 uintptr
+
+### 命名类型(named)
 
 类型可以是命名的(named)，也可以是未命名的(unnamed)。
 
@@ -39,7 +49,7 @@ description:
 	[] string
 	[] int
 
-无类型的名字，通用用于定义其它类型时:
+无类型的名字，通用用于定义其它类型:
 
 	type Array []int
 
@@ -53,7 +63,8 @@ description:
 	    println(s.age)
 	}
 
-## 实际类型(underlying type)
+
+### 实际类型(underlying type)
 
 类型是可以用来定义其它类型的，例如：
 
@@ -76,15 +87,7 @@ T1的实际类型(underlying type)是string，T2的实际类型不是T1，而是
 	type T3 []T1
 	type T4 T3
 
-## 内置类型(predeclared)
-
-go语言内置了下面的类型：
-
-	bool byte complex64 complex128 error float32 float64
-	int int8 int16 int32 int64 rune string
-	uint uint8 uint16 uint32 uint64 uintptr
-
-## 类型的方法(Method sets)
+### 类型的方法(method sets)
 
 类型可以有自己的方法(Method)，也就是其它语言中的函数。
 
@@ -110,14 +113,84 @@ go语言内置了下面的类型：
 
 方法集中的方法不能重名、且必须有名字。
 
-## 布尔(Boolean types)
+### 类型的等同性(identical)
+
+命名语句不同的两个命名类型，是不等同的。例如下面的T1和T2，虽然实际类型都是string，但它们是两个类型。
+
+	type T1 string
+	type T2 string
+
+命名类型与未命名类型是不等同的，例如下面的T1与[]string是两个类型。
+
+	type T1 []string
+	[]string
+
+命名语句和定义语句`完全相同`的两个命名类型是才等同的，例如下面的T1。
+
+	type T1 string
+	type T1 string
+
+定义语句`完全相同`的两个未命名类型才是等同的，例如下面的[]string。
+
+	[5]string
+	[5]string
+
+在编程时，同一个类型只会定义一次。
+
+在代码中定义`两个`等同的类型其是做不到的，因为它们如果等同，那么其实就是一个。例如下面的代码。
+
+	package main
+	
+	type T string
+	type T string
+	
+	func main() {
+	}
+
+编译时会报错。
+
+	./main.go:5: T redeclared in this block
+	    previous declaration at ./main.go:4
+
+两个类型等同是一个用来解释类型不等同的规则，即如果不符合遵守等同的规则，那么就是不等同的。
+
+对于未命名类型需要特别注意，只要不满足下面的条件，那么就是两个不同的类型：
+
+	两个数组类型要等同，不仅数组中成员的类型要相同，而且数组的长度也要相同。
+	两个分片类型等同，只需要分片的成员类型相同。
+	两个结构体等同，结构体成员的顺序、名称、标签(tag)都必须相同。
+	两个指针类型，所指向的类型相同。
+	两个函数类型，要有相同的数量的参数和返回值，参数和返回值的类型要相同，参数名和返回值的名字可以不同。
+	两个接口类型，要有相同的方法，方法的顺序可以不同。
+	两个字典类型，key的类型和value的类型必须相同。
+	两个通道(channel)类型，通道的方向和传递的类型必须相同。
+
+例如下面两个函数类型符合上面的条件，所以是相同的：
+
+	func(x int, y float64) *[]string
+	func(int, float64) (result *[]string)
+
+### 类型的赋值(Assignability)
+
+一个值(value)只有在满足下面的条件时，才可以被赋给对应的类型的变量(variable)。
+
+	值的类型与变量的类型相同
+	值的类型与变量的实际类型相同，且其中一个的类型是未命名的类型
+	变量的类型是一个接口，值实现了接口中方法
+	值是一个双向的通道(channel)，变量类型也是通道，传递的数据类型相同，并且其中一个的类型是未命名的。
+	值是内置的数值nil，变量的类型是指针(pointer)、函数(function)、分片(slice)、字典(map)、通道(channel)、接口(interface)
+	值是一个符合变量的类型要求的常量。
+
+## go支持的类型
+
+### 布尔(Boolean types)
 
 布尔类型是内置的类型`bool`，它的value只能是两个内置的常量：
 
 	true
 	false
 
-## 数值(Numeric types)
+### 数值(Numeric types)
 
 数值类型都是内置的类型，一共有以下几种。
 
@@ -146,7 +219,7 @@ go语言内置了下面的类型：
 	int      same size as uint
 	uintptr  an unsigned integer large enough to store the uninterpreted bits of a pointer value
 
-## 字符串(String types)
+### 字符串(String types)
 
 字符串是内置的类型`string`，字符串的值是连续的字节，这些字节是不可更改的。
 
@@ -171,7 +244,7 @@ go语言内置了下面的类型：
 	    //str[6] = 'w'
 	}
 
-## 数组(Array types)
+### 数组(Array types)
 
 数组是多个相同类型的值，在go中，数组必须有长度，长度是数组类型的一部分。
 
@@ -204,7 +277,7 @@ go语言内置了下面的类型：
 
 数组成员可以用从0开始的坐标索引，长度可以用内置的函数`len`获取。
 
-## 分片(Slice types)
+### 分片(Slice types)
 
 分片(Slice)是用来索引数组(Array)中的一段连续的成员的。
 
@@ -285,7 +358,7 @@ go语言内置了下面的类型：
 
 	new([100]int)[0:50]
 
-## 结构体(Struct types)
+### 结构体(Struct types)
 
 结构体(Struct)是比较复杂的类型，它是由多个命名变量组成，这些变量每个都有名字和类型，被成为"结构体成员(field)"。
 
@@ -501,7 +574,7 @@ go语言中可以在每个结构体成员后面跟随一个标签(tag)，标签�
 	    F func()
 	}
 
-## 指针(Pointer types)
+### 指针(Pointer types)
 
 指针类型比较简单：
 
@@ -521,7 +594,7 @@ go语言中可以在每个结构体成员后面跟随一个标签(tag)，标签�
 	    println(*pi, i)
 	}
 
-## 函数(Function types)
+### 函数(Function types)
 
 go语言的函数的声明格式与其它语言也有所不同。
 
@@ -561,7 +634,7 @@ go语言的函数的声明格式与其它语言也有所不同。
 
 注意，这里给出的是函数类型，函数类型不等于函数的声明与实现，函数的声明与实现在后面章节中。
 
-## 接口(Interface types)
+### 接口(Interface types)
 
 接口类型的格式如下：
 
@@ -605,7 +678,7 @@ go语言的函数的声明格式与其它语言也有所不同。
 	    Bad1
 	}
 
-## 字典(Map types)
+### 字典(Map types)
 
 go语言原生支持字典(map)。
 
@@ -649,7 +722,7 @@ map的长度不受创建时指定的length的限制，可以无限增加成员�
 	    fmt.Println(m)
 	}
 
-## 通道(Channel types)
+### 通道(Channel types)
 
 通道是用来在并发编程中传递value的。
 
@@ -683,11 +756,3 @@ map的长度不受创建时指定的length的限制，可以无限增加成员�
 通道是并发安全的，使用内置函数len读取通道中缓存的数据个数，或者用cap读取通道容量，不需要考虑并发的影响。
 
 另外通道中的数据遵循先入先出的规则。
-
-## 参考
-
-1. [文献1][1]
-2. [文献2][2]
-
-[1]: 1.com  "文献1" 
-[2]: 2.com  "文献1" 
