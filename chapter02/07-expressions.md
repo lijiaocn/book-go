@@ -3,7 +3,7 @@ layout: default
 title: 07-expressions
 author: lijiaocn
 createdate: 2017/12/20 16:38:41
-changedate: 2017/12/20 23:34:21
+changedate: 2017/12/21 19:21:00
 categories:
 tags:
 keywords:
@@ -19,6 +19,52 @@ description:
 ## 表达式
 
 表达式是用运算符和函数的描述的一个计算过程。
+
+### 常量表达式(Constant expressions)
+
+常量表达式在编译时执行，常量表达式中只能使用常量。
+
+使用常量表达式时，需要特别注意未明确声明类型的常量的类型。
+
+	const a = 2 + 3.0             // a == 5.0   (untyped floating-point constant)
+	const b = 15 / 4              // b == 3     (untyped integer constant)
+	const c = 15 / 4.0            // c == 3.75  (untyped floating-point constant)
+	const Θ float64 = 3/2         // Θ == 1.0   (type float64, 3/2 is integer division)
+	const Π float64 = 3/2.        // Π == 1.5   (type float64, 3/2. is float division)
+	const d = 1 << 3.0            // d == 8     (untyped integer constant)
+	const e = 1.0 << 3            // e == 8     (untyped integer constant)
+	const f = int32(1) << 33      // illegal    (constant 8589934592 overflows int32)
+	const g = float64(2) >> 1     // illegal    (float64(2) is a typed floating-point constant)
+	const h = "foo" > "bar"       // h == true  (untyped boolean constant)
+	const j = true                // j == true  (untyped boolean constant)
+	const k = 'w' + 1             // k == 'x'   (untyped rune constant)
+	const l = "hi"                // l == "hi"  (untyped string constant)
+	const m = string(k)           // m == "x"   (type string)
+	const Σ = 1 - 0.707i          //            (untyped complex constant)
+	const Δ = Σ + 2.0e-4          //            (untyped complex constant)
+	const Φ = iota*1i - 1/1i      //            (untyped complex constant)
+	
+complex是内置的函数，返回常量：
+
+	const ic = complex(0, c)      // ic == 3.75i  (untyped complex constant)
+	const iΘ = complex(0, Θ)      // iΘ == 1i     (type complex128)
+	
+如果常量的值超过了能够表达的范围，这个常量可以作为中间值使用：
+
+	const Huge = 1 << 100         // Huge == 1267650600228229401496703205376  (untyped integer constant)
+	const Four int8 = Huge >> 98  // Four == 4                                (type int8)
+
+除数不能为0：
+
+	const n = 3.14 / 0.0          // illegal: division by zero
+
+不可以将常量转换为不匹配的类型：
+
+	uint(-1)     // -1 cannot be represented as a uint
+	int(3.14)    // 3.14 cannot be represented as an int
+	int64(Huge)  // 1267650600228229401496703205376 cannot be represented as an int64
+	Four * 300   // operand 300 cannot be represented as an int8 (type of Four)
+	Four * 100   // product 400 cannot be represented as an int8 (type of Four)
 
 ### 选择表达式(Selector)
 
