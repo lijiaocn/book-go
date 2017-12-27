@@ -19,3 +19,11 @@
 #  name = "github.com/x/y"
 #  version = "2.4.0"
 
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/lijiaocn/pkg-go"
+
+[[constraint]]
+  name = "k8s.io/client-go"
+  version = "6.0.0"

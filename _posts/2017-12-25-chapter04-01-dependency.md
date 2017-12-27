@@ -3,7 +3,7 @@ layout: default
 title: 01-Go项目的依赖管理工具
 author: lijiaocn
 createdate: 2017/12/26 17:14:16
-changedate: 2017/12/27 12:20:18
+changedate: 2017/12/27 13:07:37
 categories: chapter04
 tags:
 keywords:
@@ -48,10 +48,25 @@ $ tree
 1 directory, 2 files
 {% endhighlight %}
 
-使用ensure命令安装依赖包：
+`Gopkg.toml`和`Gopkg.lock`用来记录项目的依赖包，如果项目中没有代码，这两个文件是空的。
 
+使用`dep ensure -add`添加依赖包（项目目录中需要有源码）：
 
+	dep ensure -add  k8s.io/client-go
 
+这时依赖包的依赖包还没有安装到项目本地，需要执行`dep ensure`进行安装。
+
+代码中引用的其它`未通过dep添加`的依赖包，也需要执行`dep ensure`进行安装。
+
+如果要更改依赖的版本，编辑`Gopkg.toml`之后，执行`dep ensure`。
+
+`dep ensure`将所有的依赖包信息更新到Gopkg.lock文件中，并将所有的依赖包下载到vendor目录中。
+
+### 发布
+
+可以只将`Gopkg.toml`和`Gopkg.lock`包含到项目代码库中。之后在项目根目录中执行`dep ensure`下载依赖包：
+
+	dep ensure
 
 ## Glide
 
@@ -377,4 +392,4 @@ main.go中引用的是本地的`vendor/.../version`中的文件。
 
 [1]: https://github.com/tools/godep "godep"
 [2]: https://github.com/Masterminds/glide "glide"
-[3]: https://github.com/golang/dep "dep
+[3]: https://github.com/golang/dep "dep"
