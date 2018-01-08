@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: post
 title: 01-Go项目的依赖管理工具
 author: lijiaocn
 createdate: 2017/12/26 17:14:16
-changedate: 2017/12/27 13:07:37
+changedate: 2017/12/27 17:17:52
 categories: chapter04
 tags:
 keywords:
