@@ -13,7 +13,7 @@ layout: default
   <ul class="post-list">
   {% for cate in site.categories %}
     {% if cate[0] == page.cate %}
-      {% for post in cate[1] %}
+      {% for post in cate[1] reversed %}
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
