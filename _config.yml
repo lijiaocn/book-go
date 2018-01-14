@@ -17,8 +17,8 @@ title: Go语言简明手册
 email: lijiaocn@foxmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     这是一本面向Go语言学习者、Go语言程序开发人员的手册。
-baseurl: "/handbook-go" # the subpath of your site, e.g. /blog
-imgpath: "/handbook-go/img"
+baseurl: "/go" # the subpath of your site, e.g. /blog
+imgpath: "/go/img"
 url: "http://www.lijiaocn.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  lijiaocn
