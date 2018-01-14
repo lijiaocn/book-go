@@ -105,4 +105,4 @@ Error:
 
 1. [go Constants][1]
 
-[1]: http://127.0.0.1:6060/ref/spec#Constants  "go Constants" 
+[1]: https://golang.org/ref/spec#Constants  "go Constants" 

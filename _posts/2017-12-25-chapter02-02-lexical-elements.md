@@ -286,4 +286,4 @@ godoc中给出的rune literal：
 
 1. [go Lexical elements][1]
 
-[1]: http://127.0.0.1:6060/ref/spec#Lexical_elements  "go Lexical elements" 
+[1]: https://golang.org/ref/spec#Lexical_elements  "go Lexical elements" 

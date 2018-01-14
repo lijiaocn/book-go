@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 01-安装配置
+title: "01-安装配置：下载安装Go"
 author: lijiaocn
 createdate: 2017/12/16 15:39:52
-changedate: 2017/12/25 13:01:28
+changedate: 2018/01/13 17:03:10
 categories: chapter01
 tags:
 keywords:
@@ -81,7 +81,7 @@ go命令位于`/opt/go/1.9.2/bin/`目录中：
 	$ /opt/go/1.9.2/go/bin/go version
 	go version go1.9.2 linux/amd64
 
-为了方便，需要将`/opt/go/1.9.2/go/bin/`添加到环境变量`PATH`中：
+为了方便，最好将`/opt/go/1.9.2/go/bin/`添加到环境变量`PATH`中：
 
 	$ echo 'export PATH=$PATH:/opt/go/1.9.2/go/bin/' >>~/.bash_profile
 	$ source ~/.bash_profile

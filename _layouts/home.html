@@ -8,7 +8,7 @@ layout: default
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   <ul class="post-list">
   {% for cate in site.categories %}
-      <span class="post-meta">{{ cate[0] }}</span>
+  <span class="post-meta">{{ cate[0] }}--{{ site.data.chapters | map: cate[0] }}</span>
       {% for post in cate[1] reversed %}
       <li>
         <h2>
