@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "下载安装Go"
+title: "安装Go"
 author: lijiaocn
 createdate: 2017/12/16 15:39:52
-changedate: 2018/02/18 17:51:19
+changedate: 2018/02/18 18:01:06
 categories: chapter01
 tags:
 keywords:
