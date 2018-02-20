@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "安装Go"
+title: "01-安装Go"
 author: lijiaocn
 createdate: 2017/12/16 15:39:52
-changedate: 2018/02/18 18:01:06
+changedate: 2018/02/20 15:53:22
 categories: chapter01
 tags:
 keywords:
