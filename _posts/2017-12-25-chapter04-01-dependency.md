@@ -3,7 +3,7 @@ layout: post
 title: 01-Go项目的依赖管理工具
 author: lijiaocn
 createdate: 2017/12/26 17:14:16
-changedate: 2017/12/27 17:17:52
+changedate: 2018/04/11 19:08:02
 categories: chapter04
 tags:
 keywords:
@@ -84,6 +84,8 @@ Mac上还可以用brew安装：
 
 ### 使用
 
+#### glide create初始化
+
 在项目的根目录中执行`glide create`完成初始化设置。
 
 {% highlight shell  %}
@@ -102,7 +104,11 @@ N
 [INFO]	--> Running the config-wizard command to improve the versions in your configuration
 {% endhighlight %}
 
->如果项目中已经有代码，glide会自动将代码中引入的依赖包下载到项目本地。
+如果项目中已经有代码，会将已有代码的依赖写入到glide.yaml中。
+
+之后直接使用`glide up --quick`将已有代码的依赖收集到vendor目录中。
+
+#### glide get 添加依赖包
 
 使用glide安装依赖包的时候，会自动提示版本。例如用glide的命令引入`k8s.io/client-go`时：
 
@@ -150,6 +156,8 @@ $ tree -L 2
 
 这时，依赖包已经安装到了项目本地，但是依赖包的依赖包还需要通过执行`glide up`进行安装。
 
+#### glide up 更新vendor目录
+
 项目的源代码中直接引入的`不是通过glide命令安装`的包，也需要执行`glide up`安装。
 
 `glide up`会在glide.lock中记录依赖包的依赖包和源码引用的依赖包，并将这些依赖包安装到项目本地。
@@ -157,6 +165,8 @@ $ tree -L 2
 >⚠️  glide up安装的依赖包是直接从github或者其它网址下载的，既不会使用、也不会更改$GOPATH中的源码。
 
 >⚠️  没有指定版本的依赖包，glide up每次执行的时候，都会去获取安装最新的代码。
+
+>⚠️  glide up默认递归搜集依赖，可以用glide up --quick
 
 {% highlight shell  %}
 $ glide up
