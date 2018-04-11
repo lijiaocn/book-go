@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "01-安装配置：下载安装Go"
+title: "01-安装Go"
 author: lijiaocn
 createdate: 2017/12/16 15:39:52
-changedate: 2018/01/13 17:03:10
+changedate: 2018/02/20 15:53:22
 categories: chapter01
 tags:
 keywords:
