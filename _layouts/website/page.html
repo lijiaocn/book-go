@@ -29,8 +29,8 @@
 {% block body %}
 <div class="book">
     <div class="book-summary">
+        {% include "summary_top.html" %}
         {% block book_sidebar %}
-            {% include "summary_top_ad.html" %}
             {% block search_input %}{% endblock %}
             {% block book_summary %}
                 <nav role="navigation">
@@ -38,6 +38,7 @@
                 </nav>
             {% endblock %}
         {% endblock %}
+        {% include "summary_bottom.html" %}
     </div>
 
     <div class="book-body">
@@ -47,6 +48,7 @@
                     {% include "website/header.html" %}
 
                     <div class="page-wrapper" tabindex="-1" role="main">
+                        {% include "page_top.html" %}
                         <div class="page-inner">
                             {% block search_results %}
                                 <section class="normal markdown-section">
@@ -56,7 +58,7 @@
                                 </section>
                             {% endblock %}
                         </div>
-                        {% include "page_bottom_ad.html" %}
+                        {% include "page_bottom.html" %}
                     </div>
                 {% endblock %}
             </div>

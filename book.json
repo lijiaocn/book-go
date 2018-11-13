@@ -1,3 +1,6 @@
 {
-	"author": "李佶澳"
+	"author": "李佶澳",
+	"plugins": [
+	   "fork-theme-default@git+https://github.com/lijiaocn/theme-default.git#master"
+	]
 }
