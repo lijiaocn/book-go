@@ -1,6 +1,6 @@
 # 目录
 
-* [返回主页](https://www.lijiaocn.com)
+* [返回博客首页](https://www.lijiaocn.com)
 * [关于这本书]( ./README.md )
 * [第一章 准备环境]( ./chapter01/00-about.md ) 
 	* [安装go]( ./chapter01/01-install.md )
