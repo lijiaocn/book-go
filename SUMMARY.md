@@ -21,3 +21,9 @@
 	* [错误处理]( ./chapter02/12-errors.md )
 	* [系统相关]( ./chapter02/13-system.md )
 	* [示例]( ./chapter02/99-examples.md )
+* [第三章 常用操作]( ./chapter03/00-about.md )
+    * [命令行参数]( ./chapter03/01-cmdline.md )
+    * [日志打印]( ./chapter03/02-log.md )
+* [第四章 项目管理]( ./chapter04/00-about.md )
+    * [依赖代码管理]( ./chapter04/01-dependency.md )
+
