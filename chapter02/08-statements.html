@@ -1,0 +1,933 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>语句 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8176866190626448",
+              enable_page_level_ads: true
+         });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105389858-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-105389858-3');
+    </script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?b8aa08d5971ddded8827017591f0a996";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="09-builtin.html" />
+    
+    
+    <link rel="prev" href="07-expressions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+
+<div style="height:150px;text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Top_180x150 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:180px;height:150px"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="6467682802"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+    <nav role="navigation">
+    
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://www.lijiaocn.com">
+            
+                    
+                    返回博客首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于这本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter01/00-about.html">
+            
+                <a href="../chapter01/00-about.html">
+            
+                    
+                    第一章 准备环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter01/01-install.html">
+            
+                <a href="../chapter01/01-install.html">
+            
+                    
+                    安装go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter01/02-godoc.html">
+            
+                <a href="../chapter01/02-godoc.html">
+            
+                    
+                    使用godoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter01/03-ide.html">
+            
+                <a href="../chapter01/03-ide.html">
+            
+                    
+                    IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="00-about.html">
+            
+                <a href="00-about.html">
+            
+                    
+                    第二章 语法概览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-purpose.html">
+            
+                <a href="01-purpose.html">
+            
+                    
+                    目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-lexical-elements.html">
+            
+                <a href="02-lexical-elements.html">
+            
+                    
+                    词法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03-constants.html">
+            
+                <a href="03-constants.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04-variables.html">
+            
+                <a href="04-variables.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05-types.html">
+            
+                <a href="05-types.html">
+            
+                    
+                    类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06-declarations.html">
+            
+                <a href="06-declarations.html">
+            
+                    
+                    声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07-expressions.html">
+            
+                <a href="07-expressions.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.8" data-path="08-statements.html">
+            
+                <a href="08-statements.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="09-builtin.html">
+            
+                <a href="09-builtin.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="10-package.html">
+            
+                <a href="10-package.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="11-initialization.html">
+            
+                <a href="11-initialization.html">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="12-errors.html">
+            
+                <a href="12-errors.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="13-system.html">
+            
+                <a href="13-system.html">
+            
+                    
+                    系统相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="99-examples.html">
+            
+                <a href="99-examples.html">
+            
+                    
+                    示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter03/00-about.html">
+            
+                <a href="../chapter03/00-about.html">
+            
+                    
+                    第三章 常用操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter03/01-cmdline.html">
+            
+                <a href="../chapter03/01-cmdline.html">
+            
+                    
+                    命令行参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter03/02-log.html">
+            
+                <a href="../chapter03/02-log.html">
+            
+                    
+                    日志打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter04/00-about.html">
+            
+                <a href="../chapter04/00-about.html">
+            
+                    
+                    第四章 项目管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter04/01-dependency.html">
+            
+                <a href="../chapter04/01-dependency.html">
+            
+                    
+                    依赖代码管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+    </nav>
+
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="2156601384"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >语句</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+
+<!-- Page_Top -->
+<!--div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="5702052586"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+<ul>
+<li>auto-gen TOC:
+{:toc}</li>
+</ul>
+<h1 id="go&#x7684;&#x72B6;&#x6001;&#x8BED;&#x53E5;">go&#x7684;&#x72B6;&#x6001;&#x8BED;&#x53E5;</h1>
+<pre><code>Statement =
+    Declaration | LabeledStmt | SimpleStmt |
+    GoStmt | ReturnStmt | BreakStmt | ContinueStmt | GotoStmt |
+    FallthroughStmt | Block | IfStmt | SwitchStmt | SelectStmt | ForStmt |
+    DeferStmt .
+
+SimpleStmt = EmptyStmt | ExpressionStmt | SendStmt | IncDecStmt | Assignment | ShortVarDecl .
+</code></pre><h2 id="&#x7EC8;&#x6B62;&#x8BED;&#x53E5;terminating-statements">&#x7EC8;&#x6B62;&#x8BED;&#x53E5;(Terminating statements)</h2>
+<p>&#x7EC8;&#x6B62;&#x8BED;&#x53E5;&#x662F;&#x6307;&#x4E0B;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code>return
+goto
+&#x8C03;&#x7528;&#x5185;&#x7F6E;&#x51FD;&#x6570;panic(interface{})
+if&#x8BED;&#x53E5;&#x4EE5;&#x53CA;else&#x8BED;&#x53E5;&#x4E2D;&#x8BED;&#x53E5;&#x7684;&#x7ED3;&#x675F;
+for&#x8BED;&#x53E5;&#x8BED;&#x53E5;&#x7684;&#x7ED3;&#x675F;
+switch&#x8BED;&#x53E5;&#x8BED;&#x53E5;
+select
+labeled 
+</code></pre><h2 id="&#x7A7A;&#x767D;&#x8BED;&#x53E5;empty-statements">&#x7A7A;&#x767D;&#x8BED;&#x53E5;(Empty statements)</h2>
+<p>&#x7A7A;&#x767D;&#x8BED;&#x53E5;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<pre><code>EmptyStmt = .
+</code></pre><h2 id="&#x6807;&#x8BB0;&#x8BED;&#x53E5;labeled-statements">&#x6807;&#x8BB0;&#x8BED;&#x53E5;(Labeled statements)</h2>
+<p>&#x6807;&#x8BB0;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x662F;goto&#x3001;break&#x3001;continue&#x7684;&#x76EE;&#x6807;&#x3002;</p>
+<pre><code>LabeledStmt = Label &quot;:&quot; Statement .
+Label       = identifier .
+</code></pre><h2 id="&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x53E5;expression-statements">&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x53E5;(Expression statements)</h2>
+<p>&#x9664;&#x4E86;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x5B83;&#x7684;&#x51FD;&#x6570;&#x3001;&#x65B9;&#x6CD5;&#x548C;&#x63A5;&#x6536;&#x64CD;&#x4F5C;&#x7B26;&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8868;&#x8FBE;&#x5F0F;&#x8BED;&#x53E5;&#x3002;</p>
+<pre><code>append cap complex imag len make new real
+unsafe.Alignof unsafe.Offsetof unsafe.Sizeof
+</code></pre><h2 id="&#x53D1;&#x9001;&#x8BED;&#x53E5;send-statements">&#x53D1;&#x9001;&#x8BED;&#x53E5;(Send statements)</h2>
+<p>&#x53D1;&#x9001;&#x8BED;&#x53E5;&#x662F;&#x4E13;&#x7528;&#x4E8E;&#x5411;&#x901A;&#x9053;(channel)&#x53D1;&#x9001;&#x6570;&#x636E;&#x7684;&#x3002;</p>
+<pre><code>SendStmt = Channel &quot;&lt;-&quot; Expression .
+Channel  = Expression .
+</code></pre><h2 id="&#x9012;&#x589E;&#x9012;&#x51CF;&#x8BED;&#x53E5;incdec-statements">&#x9012;&#x589E;&#x9012;&#x51CF;&#x8BED;&#x53E5;(IncDec statements)</h2>
+<pre><code>IncDecStmt = Expression ( &quot;++&quot; | &quot;--&quot; ) .
+</code></pre><h2 id="&#x8D4B;&#x503C;&#x8BED;&#x53E5;assignments">&#x8D4B;&#x503C;&#x8BED;&#x53E5;(Assignments)</h2>
+<pre><code>Assignment = ExpressionList assign_op ExpressionList .
+assign_op = [ add_op | mul_op ] &quot;=&quot; .
+</code></pre><h2 id="if&#x8BED;&#x53E5;if-statements">if&#x8BED;&#x53E5;(If statements)</h2>
+<pre><code>IfStmt = &quot;if&quot; [ SimpleStmt &quot;;&quot; ] Expression Block [ &quot;else&quot; ( IfStmt | Block ) ] .
+</code></pre><h2 id="switch&#x8BED;&#x53E5;switch-statements">switch&#x8BED;&#x53E5;(Switch statements)</h2>
+<p>switch&#x8BED;&#x53E5;&#x5206;&#x4E3A;&#x4EE5;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A;&#x4F9D;&#x636E;&#xFF0C;&#x548C;&#x4EE5;&#x7C7B;&#x578B;&#x4E3A;&#x4F9D;&#x636E;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#x3002;</p>
+<pre><code>SwitchStmt = ExprSwitchStmt | TypeSwitchStmt .
+</code></pre><p>&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#x4F5C;&#x4E3A;&#x5206;&#x652F;&#x4F9D;&#x636E;&#xFF1A;</p>
+<pre><code>ExprSwitchStmt = &quot;switch&quot; [ SimpleStmt &quot;;&quot; ] [ Expression ] &quot;{&quot; { ExprCaseClause } &quot;}&quot; .
+ExprCaseClause = ExprSwitchCase &quot;:&quot; StatementList .
+ExprSwitchCase = &quot;case&quot; ExpressionList | &quot;default&quot; .
+</code></pre><p>&#x4F8B;&#x5982;:</p>
+<pre><code>switch tag {
+default: s3()
+case 0, 1, 2, 3: s1()
+case 4, 5, 6, 7: s2()
+}
+
+switch x := f(); {  // missing switch expression means &quot;true&quot;
+case x &lt; 0: return -x
+default: return x
+}
+
+switch {
+case x &lt; y: f1()
+case x &lt; z: f2()
+case x == 4: f3()
+}
+</code></pre><p>&#x4F7F;&#x7528;&#x7C7B;&#x578B;&#x4E3A;&#x4F9D;&#x636E;&#xFF1A;</p>
+<pre><code>TypeSwitchStmt  = &quot;switch&quot; [ SimpleStmt &quot;;&quot; ] TypeSwitchGuard &quot;{&quot; { TypeCaseClause } &quot;}&quot; .
+TypeSwitchGuard = [ identifier &quot;:=&quot; ] PrimaryExpr &quot;.&quot; &quot;(&quot; &quot;type&quot; &quot;)&quot; .
+TypeCaseClause  = TypeSwitchCase &quot;:&quot; StatementList .
+TypeSwitchCase  = &quot;case&quot; TypeList | &quot;default&quot; .
+TypeList        = Type { &quot;,&quot; Type } .
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>switch i := x.(type) {
+case nil:
+    printString(&quot;x is nil&quot;)                // type of i is type of x (interface{})
+case int:
+    printInt(i)                            // type of i is int
+case float64:
+    printFloat64(i)                        // type of i is float64
+case func(int) float64:
+    printFunction(i)                       // type of i is func(int) float64
+case bool, string:
+    printString(&quot;type is bool or string&quot;)  // type of i is type of x (interface{})
+default:
+    printString(&quot;don&apos;t know the type&quot;)     // type of i is type of x (interface{})
+}
+</code></pre><h2 id="for&#x8BED;&#x53E5;for-statements">for&#x8BED;&#x53E5;(For statements)</h2>
+<p>for&#x7684;&#x8BED;&#x53E5;&#x5FAA;&#x73AF;&#x6761;&#x4EF6;&#x6709;&#x4E09;&#x79CD;&#x3002;</p>
+<pre><code>ForStmt = &quot;for&quot; [ Condition | ForClause | RangeClause ] Block .
+Condition = Expression .
+</code></pre><p>&#x7B80;&#x7565;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF1A;</p>
+<pre><code>for a &lt; b {
+    a *= 2
+}
+</code></pre><p>&#x5B8C;&#x6574;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF1A;</p>
+<pre><code>ForClause = [ InitStmt ] &quot;;&quot; [ Condition ] &quot;;&quot; [ PostStmt ] .
+InitStmt = SimpleStmt .
+PostStmt = SimpleStmt .
+</code></pre><p>&#x4F8B;&#x5982;:</p>
+<pre><code>for i := 0; i &lt; 10; i++ {
+    f(i)
+}
+
+for cond { S() }    is the same as    for ; cond ; { S() }
+for      { S() }    is the same as    for true     { S() }
+</code></pre><p>range&#x5224;&#x65AD;&#xFF1A;</p>
+<pre><code>RangeClause = [ ExpressionList &quot;=&quot; | IdentifierList &quot;:=&quot; ] &quot;range&quot; Expression .
+</code></pre><p>&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x662F;Expression&#x4E0D;&#x540C;&#x65F6;&#xFF0C;<code>range Expression</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E0D;&#x540C;&#x3002;</p>
+<pre><code>Range expression                          1st value          2nd value
+
+array or slice  a  [n]E, *[n]E, or []E    index    i  int    a[i]       E
+string          s  string type            index    i  int    see below  rune
+map             m  map[K]V                key      k  K      m[k]       V
+channel         c  chan E, &lt;-chan E       element  e  E
+</code></pre><h2 id="go&#x8BED;&#x53E5;go-statements">go&#x8BED;&#x53E5;(Go statements)</h2>
+<pre><code>Stmt = &quot;go&quot; Expression .
+</code></pre><h2 id="select&#x8BED;&#x53E5;select-statements">select&#x8BED;&#x53E5;(Select statements)</h2>
+<p>select&#x8BED;&#x53E5;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x5F53;&#x524D;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x8BED;&#x53E5;&#x3002;</p>
+<pre><code>SelectStmt = &quot;select&quot; &quot;{&quot; { CommClause } &quot;}&quot; .
+CommClause = CommCase &quot;:&quot; StatementList .
+CommCase   = &quot;case&quot; ( SendStmt | RecvStmt ) | &quot;default&quot; .
+RecvStmt   = [ ExpressionList &quot;=&quot; | IdentifierList &quot;:=&quot; ] RecvExpr .
+RecvExpr   = Expression .
+</code></pre><p>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x8BED;&#x53E5;&#x5F53;&#x524D;&#x90FD;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x8FD9;&#x4E9B;&#x8BED;&#x53E5;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x3002;</p>
+<pre><code>1. &#x901A;&#x9053;(channel)&#x76F8;&#x5173;&#x7684;&#x8BED;&#x53E5;&#x5982;&#x679C;&#x540C;&#x65F6;&#x8FDB;&#x5165;&#x53EF;&#x6267;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x53EA;&#x6267;&#x884C;&#x5728;&#x6E90;&#x7801;&#x4E2D;&#x4F4D;&#x7F6E;&#x9760;&#x524D;&#x7684;&#x8BED;&#x53E5;
+2. &#x5982;&#x679C;&#x591A;&#x4E2A;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x3002;
+3. &#x5982;&#x679C;&#x6240;&#x6709;&#x8BED;&#x53E5;&#x90FD;&#x4E0D;&#x80FD;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x6267;&#x884C;default&#x8BED;&#x53E5;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;default&#x8BED;&#x53E5;&#xFF0C;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x72B6;&#x6001;
+</code></pre><p>&#x4F8B;&#x5982;:</p>
+<pre><code>var a []int
+var c, c1, c2, c3, c4 chan int
+var i1, i2 int
+select {
+case i1 = &lt;-c1:
+    print(&quot;received &quot;, i1, &quot; from c1\n&quot;)
+case c2 &lt;- i2:
+    print(&quot;sent &quot;, i2, &quot; to c2\n&quot;)
+case i3, ok := (&lt;-c3):  // same as: i3, ok := &lt;-c3
+    if ok {
+        print(&quot;received &quot;, i3, &quot; from c3\n&quot;)
+    } else {
+        print(&quot;c3 is closed\n&quot;)
+    }
+case a[f()] = &lt;-c4:
+    // same as:
+    // case t := &lt;-c4
+    //    a[f()] = t
+default:
+    print(&quot;no communication\n&quot;)
+}
+
+for {  // send random sequence of bits to c
+    select {
+    case c &lt;- 0:  // note: no statement, no fallthrough, no folding of cases
+    case c &lt;- 1:
+    }
+}
+
+select {}  // block forever
+</code></pre><h2 id="&#x8FD4;&#x56DE;&#x8BED;&#x53E5;return-statements">&#x8FD4;&#x56DE;&#x8BED;&#x53E5;(Return statements)</h2>
+<pre><code>ReturnStmt = &quot;return&quot; [ ExpressionList ] .
+</code></pre><p>&#x4F8B;&#x5982;:</p>
+<pre><code>func simpleF() int {
+    return 2
+}
+</code></pre><p>&#x652F;&#x6301;&#x591A;&#x503C;&#x8FD4;&#x56DE;:</p>
+<pre><code>func complexF1() (re float64, im float64) {
+    return -7.0, -4.0
+}
+</code></pre><p>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#xFF1A;</p>
+<pre><code>func complexF2() (re float64, im float64) {
+    return complexF1()
+}
+</code></pre><p>&#x8FD8;&#x53EF;&#x4EE5;&#x547D;&#x540D;&#x8FD4;&#x56DE;&#xFF1A;</p>
+<pre><code>func complexF3() (re float64, im float64) {
+    re = 7.0
+    im = 4.0
+    return
+}
+
+func (devnull) Write(p []byte) (n int, _ error) {
+    n = len(p)
+    return
+}
+</code></pre><p>&#x547D;&#x540D;&#x7684;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x540C;&#x6709;&#x540C;&#x540D;&#x7684;&#x5176;&#x5B83;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>func f(n int) (res int, err error) {
+    if _, err := f(n-1); err != nil {
+        return  // invalid return statement: err is shadowed
+    }
+    return
+}
+</code></pre><h2 id="break&#x8BED;&#x53E5;break-statement">break&#x8BED;&#x53E5;(Break statement)</h2>
+<pre><code>BreakStmt = &quot;break&quot; [ Label ] .
+</code></pre><p>&#x4F8B;&#x5982;:</p>
+<pre><code>OuterLoop:
+    for i = 0; i &lt; n; i++ {
+        for j = 0; j &lt; m; j++ {
+            switch a[i][j] {
+            case nil:
+                state = Error
+                break OuterLoop
+            case item:
+                state = Found
+                break OuterLoop
+            }
+        }
+    }
+</code></pre><h2 id="continue&#x8BED;&#x53E5;continue-statements">continue&#x8BED;&#x53E5;(Continue statements)</h2>
+<pre><code>ContinueStmt = &quot;continue&quot; [ Label ] .
+</code></pre><p>&#x4F8B;&#x5982;:</p>
+<pre><code>RowLoop:
+    for y, row := range rows {
+        for x, data := range row {
+            if data == endOfRow {
+                continue RowLoop
+            }
+            row[x] = data + bias(x, y)
+        }
+    }
+</code></pre><h2 id="goto&#x8BED;&#x53E5;goto-statements">goto&#x8BED;&#x53E5;(Goto statements)</h2>
+<pre><code>GotoStmt = &quot;goto&quot; Label .
+</code></pre><p>&#x4F7F;&#x7528;goto&#x7684;&#x65F6;&#x5019;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF0C;&#x4E0D;&#x8981;&#x5728;goto&#x4E0E;Label&#x76F4;&#x63A5;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x505A;&#x6CD5;&#x7B26;&#x5408;&#x8BED;&#x6CD5;&#x8981;&#x6C42;&#xFF0C;&#x4F46;&#x662F;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x6DF7;&#x4E71;&#xFF0C;&#x5728;<code>L:</code>&#x4E4B;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x4F7F;&#x7528;i&#xFF0C;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre><code>    goto L  // BAD
+    v := 3
+L:
+</code></pre><p>goto&#x53EA;&#x80FD;&#x8DF3;&#x8F6C;&#x5230;&#x6240;&#x5728;&#x533A;&#x5757;&#x4E2D;&#x7684;&#x6807;&#x8BB0;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x4E0D;&#x7B26;&#x5408;&#x8BED;&#x6CD5;&#x7684;&#xFF0C;L1&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x533A;&#x5757;&#x4E2D;&#x7684;&#x6807;&#x8BB0;&#x3002;</p>
+<pre><code>if n%2 == 1 {
+    goto L1
+}
+for n &gt; 0 {
+    f()
+    n--
+L1:
+    f()
+    n--
+}
+</code></pre><h2 id="fallthrough&#x8BED;&#x53E5;fallthrough-statements">fallthrough&#x8BED;&#x53E5;(Fallthrough statements)</h2>
+<p>fallthrouch&#x7528;&#x4E8E;switch&#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x8868;&#x793A;&#x7D27;&#x90BB;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x9700;&#x8981;&#x88AB;&#x6267;&#x884C;&#x3002;</p>
+<pre><code>FallthroughStmt = &quot;fallthrough&quot; .
+</code></pre><h2 id="defer&#x8BED;&#x53E5;defer-statements">defer&#x8BED;&#x53E5;(Defer statements)</h2>
+<p>defer&#x8868;&#x793A;&#x8DDF;&#x968F;&#x7684;&#x8BED;&#x53E5;&#x9700;&#x8981;&#x5728;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x3002;</p>
+<pre><code>DeferStmt = &quot;defer&quot; Expression .
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>lock(l)
+defer unlock(l)  // unlocking happens before surrounding function returns
+
+// prints 3 2 1 0 before surrounding function returns
+for i := 0; i &lt;= 3; i++ {
+    defer fmt.Print(i)
+}
+
+// f returns 1
+func f() (result int) {
+    defer func() {
+        result++
+    }()
+    return 0
+}
+</code></pre>
+
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Page_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7945072540"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="07-expressions.html" class="navigation navigation-prev " aria-label="Previous page: 表达式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="09-builtin.html" class="navigation navigation-next " aria-label="Next page: 内置函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"createdate":"2017/12/21 23:11:24","layout":"default","keywords":null,"author":"lijiaocn","title":"语句","tags":null,"categories":null,"description":null,"changedate":"2017/12/22 00:11:36","level":"1.4.8","depth":2,"next":{"title":"内置函数","level":"1.4.9","depth":2,"path":"chapter02/09-builtin.md","ref":"./chapter02/09-builtin.md","articles":[]},"previous":{"title":"表达式","level":"1.4.7","depth":2,"path":"chapter02/07-expressions.md","ref":"./chapter02/07-expressions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/08-statements.md","mtime":"2018-12-01T08:54:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T08:29:51.793Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

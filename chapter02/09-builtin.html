@@ -1,0 +1,771 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>内置函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8176866190626448",
+              enable_page_level_ads: true
+         });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105389858-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-105389858-3');
+    </script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?b8aa08d5971ddded8827017591f0a996";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10-package.html" />
+    
+    
+    <link rel="prev" href="08-statements.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+
+<div style="height:150px;text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Top_180x150 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:180px;height:150px"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="6467682802"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+    <nav role="navigation">
+    
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://www.lijiaocn.com">
+            
+                    
+                    返回博客首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于这本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter01/00-about.html">
+            
+                <a href="../chapter01/00-about.html">
+            
+                    
+                    第一章 准备环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter01/01-install.html">
+            
+                <a href="../chapter01/01-install.html">
+            
+                    
+                    安装go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter01/02-godoc.html">
+            
+                <a href="../chapter01/02-godoc.html">
+            
+                    
+                    使用godoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter01/03-ide.html">
+            
+                <a href="../chapter01/03-ide.html">
+            
+                    
+                    IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="00-about.html">
+            
+                <a href="00-about.html">
+            
+                    
+                    第二章 语法概览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01-purpose.html">
+            
+                <a href="01-purpose.html">
+            
+                    
+                    目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-lexical-elements.html">
+            
+                <a href="02-lexical-elements.html">
+            
+                    
+                    词法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03-constants.html">
+            
+                <a href="03-constants.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04-variables.html">
+            
+                <a href="04-variables.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05-types.html">
+            
+                <a href="05-types.html">
+            
+                    
+                    类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06-declarations.html">
+            
+                <a href="06-declarations.html">
+            
+                    
+                    声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07-expressions.html">
+            
+                <a href="07-expressions.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="08-statements.html">
+            
+                <a href="08-statements.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.9" data-path="09-builtin.html">
+            
+                <a href="09-builtin.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="10-package.html">
+            
+                <a href="10-package.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="11-initialization.html">
+            
+                <a href="11-initialization.html">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="12-errors.html">
+            
+                <a href="12-errors.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="13-system.html">
+            
+                <a href="13-system.html">
+            
+                    
+                    系统相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="99-examples.html">
+            
+                <a href="99-examples.html">
+            
+                    
+                    示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter03/00-about.html">
+            
+                <a href="../chapter03/00-about.html">
+            
+                    
+                    第三章 常用操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter03/01-cmdline.html">
+            
+                <a href="../chapter03/01-cmdline.html">
+            
+                    
+                    命令行参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter03/02-log.html">
+            
+                <a href="../chapter03/02-log.html">
+            
+                    
+                    日志打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter04/00-about.html">
+            
+                <a href="../chapter04/00-about.html">
+            
+                    
+                    第四章 项目管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter04/01-dependency.html">
+            
+                <a href="../chapter04/01-dependency.html">
+            
+                    
+                    依赖代码管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+    </nav>
+
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="2156601384"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >内置函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+
+<!-- Page_Top -->
+<!--div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="5702052586"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+<ul>
+<li>auto-gen TOC:
+{:toc}</li>
+</ul>
+<h1 id="go&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;">go&#x7684;&#x5185;&#x7F6E;&#x51FD;&#x6570;</h1>
+<p>go&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3002;</p>
+<h2 id="&#x5173;&#x95ED;close">&#x5173;&#x95ED;(Close)</h2>
+<pre><code>close
+</code></pre><h2 id="&#x957F;&#x5EA6;&#x548C;&#x5BB9;&#x91CF;length-and-capacit">&#x957F;&#x5EA6;&#x548C;&#x5BB9;&#x91CF;(Length and capacit)</h2>
+<pre><code>Call      Argument type    Result
+
+len(s)    string type      string length in bytes
+          [n]T, *[n]T      array length (== n)
+          []T              slice length
+          map[K]T          map length (number of defined keys)
+          chan T           number of elements queued in channel buffer
+
+cap(s)    [n]T, *[n]T      array length (== n)
+          []T              slice capacity
+          chan T           channel buffer capacity
+</code></pre><h2 id="&#x5206;&#x914D;allocation">&#x5206;&#x914D;(Allocation)</h2>
+<pre><code>new(T)
+</code></pre><h2 id="&#x521B;&#x5EFA;making-slices-maps-and-channels">&#x521B;&#x5EFA;(Making slices, maps and channels)</h2>
+<pre><code>Call             Type T     Result
+
+make(T, n)       slice      slice of type T with length n and capacity n
+make(T, n, m)    slice      slice of type T with length n and capacity m
+
+make(T)          map        map of type T
+make(T, n)       map        map of type T with initial space for n elements
+
+make(T)          channel    unbuffered channel of type T
+make(T, n)       channel    buffered channel of type T, buffer size n
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>s := make([]int, 10, 100)       // slice with len(s) == 10, cap(s) == 100
+s := make([]int, 1e3)           // slice with len(s) == cap(s) == 1000
+s := make([]int, 1&lt;&lt;63)         // illegal: len(s) is not representable by a value of type int
+s := make([]int, 10, 0)         // illegal: len(s) &gt; cap(s)
+c := make(chan int, 10)         // channel with a buffer size of 10
+m := make(map[string]int, 100)  // map with initial space for 100 elements
+</code></pre><h2 id="&#x5206;&#x7247;&#x7684;&#x8FFD;&#x52A0;appending-to-slices">&#x5206;&#x7247;&#x7684;&#x8FFD;&#x52A0;(Appending to slices)</h2>
+<pre><code>append(s S, x ...T) S  // T is the element type of S
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>s0 := []int{0, 0}
+s1 := append(s0, 2)                // append a single element     s1 == []int{0, 0, 2}
+s2 := append(s1, 3, 5, 7)          // append multiple elements    s2 == []int{0, 0, 2, 3, 5, 7}
+s3 := append(s2, s0...)            // append a slice              s3 == []int{0, 0, 2, 3, 5, 7, 0, 0}
+s4 := append(s3[3:6], s3[2:]...)   // append overlapping slice    s4 == []int{3, 5, 7, 2, 3, 5, 7, 0, 0}
+
+var t []interface{}
+t = append(t, 42, 3.1415, &quot;foo&quot;)   //                             t == []interface{}{42, 3.1415, &quot;foo&quot;}
+
+var b []byte
+b = append(b, &quot;bar&quot;...)            // append string contents      b == []byte{&apos;b&apos;, &apos;a&apos;, &apos;r&apos; }
+</code></pre><h2 id="&#x5206;&#x7247;&#x7684;&#x590D;&#x5236;copying-slices">&#x5206;&#x7247;&#x7684;&#x590D;&#x5236;(Copying slices)</h2>
+<pre><code>copy(dst, src []T) int
+copy(dst []byte, src string) int
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>var a = [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+var s = make([]int, 6)
+var b = make([]byte, 5)
+n1 := copy(s, a[0:])            // n1 == 6, s == []int{0, 1, 2, 3, 4, 5}
+n2 := copy(s, s[2:])            // n2 == 4, s == []int{2, 3, 4, 5, 4, 5}
+n3 := copy(b, &quot;Hello, World!&quot;)  // n3 == 5, b == []byte(&quot;Hello&quot;)
+</code></pre><h2 id="&#x5B57;&#x5178;&#x6210;&#x5458;&#x7684;&#x5220;&#x9664;deletion-of-map-elements">&#x5B57;&#x5178;&#x6210;&#x5458;&#x7684;&#x5220;&#x9664;(Deletion of map elements)</h2>
+<pre><code>delete(m, k)  // remove element m[k] from map m 
+</code></pre><h2 id="&#x590D;&#x6570;&#x7684;&#x64CD;&#x4F5C;manipulating-complex-numbers">&#x590D;&#x6570;&#x7684;&#x64CD;&#x4F5C;(Manipulating complex numbers)</h2>
+<pre><code>complex(realPart, imaginaryPart floatT) complexT
+real(complexT) floatT
+imag(complexT) floatT
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>var a = complex(2, -2)             // complex128
+const b = complex(1.0, -1.4)       // untyped complex constant 1 - 1.4i
+x := float32(math.Cos(math.Pi/2))  // float32
+var c64 = complex(5, -x)           // complex64
+var s uint = complex(1, 0)         // untyped complex constant 1 + 0i can be converted to uint
+_ = complex(1, 2&lt;&lt;s)               // illegal: 2 assumes floating-point type, cannot shift
+var rl = real(c64)                 // float32
+var im = imag(a)                   // float64
+const c = imag(b)                  // untyped constant -1.4
+_ = imag(3 &lt;&lt; s)                   // illegal: 3 assumes complex type, cannot shift
+</code></pre><h2 id="panic&#x5904;&#x7406;handling-panics">panic&#x5904;&#x7406;(Handling panics)</h2>
+<pre><code>panic(interface{})
+func recover() interface{}
+</code></pre><p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>func protect(g func()) {
+    defer func() {
+        log.Println(&quot;done&quot;)  // Println executes normally even if there is a panic
+        if x := recover(); x != nil {
+            log.Printf(&quot;run time panic: %v&quot;, x)
+        }
+    }()
+    log.Println(&quot;start&quot;)
+    g()
+}
+</code></pre><h2 id="&#x81EA;&#x4E3E;&#x51FD;&#x6570;bootstrapping">&#x81EA;&#x4E3E;&#x51FD;&#x6570;(Bootstrapping)</h2>
+<pre><code>Function   Behavior
+
+print      prints all arguments; formatting of arguments is implementation-specific
+println    like print but prints spaces between arguments and a newline at the end
+</code></pre>
+
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Page_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7945072540"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08-statements.html" class="navigation navigation-prev " aria-label="Previous page: 语句">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10-package.html" class="navigation navigation-next " aria-label="Next page: 包管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"createdate":"2017/12/22 00:11:56","layout":"default","keywords":null,"author":"lijiaocn","title":"内置函数","tags":null,"categories":null,"description":null,"changedate":"2017/12/22 00:24:00","level":"1.4.9","depth":2,"next":{"title":"包管理","level":"1.4.10","depth":2,"path":"chapter02/10-package.md","ref":"./chapter02/10-package.md","articles":[]},"previous":{"title":"语句","level":"1.4.8","depth":2,"path":"chapter02/08-statements.md","ref":"./chapter02/08-statements.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/09-builtin.md","mtime":"2018-12-01T08:54:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T08:29:51.793Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

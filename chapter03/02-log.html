@@ -1,0 +1,753 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>日志打印 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8176866190626448",
+              enable_page_level_ads: true
+         });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105389858-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-105389858-3');
+    </script>
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "https://hm.baidu.com/hm.js?b8aa08d5971ddded8827017591f0a996";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter04/00-about.html" />
+    
+    
+    <link rel="prev" href="01-cmdline.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+
+<div style="height:150px;text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Top_180x150 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:180px;height:150px"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="6467682802"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+    <nav role="navigation">
+    
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="https://www.lijiaocn.com">
+            
+                    
+                    返回博客首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于这本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter01/00-about.html">
+            
+                <a href="../chapter01/00-about.html">
+            
+                    
+                    第一章 准备环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter01/01-install.html">
+            
+                <a href="../chapter01/01-install.html">
+            
+                    
+                    安装go
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter01/02-godoc.html">
+            
+                <a href="../chapter01/02-godoc.html">
+            
+                    
+                    使用godoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter01/03-ide.html">
+            
+                <a href="../chapter01/03-ide.html">
+            
+                    
+                    IDE
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter02/00-about.html">
+            
+                <a href="../chapter02/00-about.html">
+            
+                    
+                    第二章 语法概览
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter02/01-purpose.html">
+            
+                <a href="../chapter02/01-purpose.html">
+            
+                    
+                    目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter02/02-lexical-elements.html">
+            
+                <a href="../chapter02/02-lexical-elements.html">
+            
+                    
+                    词法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter02/03-constants.html">
+            
+                <a href="../chapter02/03-constants.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter02/04-variables.html">
+            
+                <a href="../chapter02/04-variables.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter02/05-types.html">
+            
+                <a href="../chapter02/05-types.html">
+            
+                    
+                    类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter02/06-declarations.html">
+            
+                <a href="../chapter02/06-declarations.html">
+            
+                    
+                    声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter02/07-expressions.html">
+            
+                <a href="../chapter02/07-expressions.html">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter02/08-statements.html">
+            
+                <a href="../chapter02/08-statements.html">
+            
+                    
+                    语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter02/09-builtin.html">
+            
+                <a href="../chapter02/09-builtin.html">
+            
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../chapter02/10-package.html">
+            
+                <a href="../chapter02/10-package.html">
+            
+                    
+                    包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../chapter02/11-initialization.html">
+            
+                <a href="../chapter02/11-initialization.html">
+            
+                    
+                    初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../chapter02/12-errors.html">
+            
+                <a href="../chapter02/12-errors.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../chapter02/13-system.html">
+            
+                <a href="../chapter02/13-system.html">
+            
+                    
+                    系统相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../chapter02/99-examples.html">
+            
+                <a href="../chapter02/99-examples.html">
+            
+                    
+                    示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="00-about.html">
+            
+                <a href="00-about.html">
+            
+                    
+                    第三章 常用操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="01-cmdline.html">
+            
+                <a href="01-cmdline.html">
+            
+                    
+                    命令行参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="02-log.html">
+            
+                <a href="02-log.html">
+            
+                    
+                    日志打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter04/00-about.html">
+            
+                <a href="../chapter04/00-about.html">
+            
+                    
+                    第四章 项目管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter04/01-dependency.html">
+            
+                <a href="../chapter04/01-dependency.html">
+            
+                    
+                    依赖代码管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+    </nav>
+
+<div style="text-align:center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Summary_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="2156601384"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >日志打印</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+
+<!-- Page_Top -->
+<!--div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="5702052586"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div-->
+
+
+<h1 id="&#x6253;&#x5370;&#x65E5;&#x5FD7;">&#x6253;&#x5370;&#x65E5;&#x5FD7;</h1>
+<h2 id="glog">glog</h2>
+<p><code>glog</code>&#x539F;&#x672C;&#x662F;google&#x4F7F;&#x7528;C++&#x5B9E;&#x73B0;&#x7684;&#x4E00;&#x4E2A;&#x65E5;&#x5FD7;&#x6A21;&#x5757;(<a href="https://github.com/google/glog" title="glog c++" target="_blank">glog c++</a>)&#xFF0C;go&#x8BED;&#x8A00;&#x51FA;&#x6765;&#x4EE5;&#x540E;&#xFF0C;&#x53C8;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;Go&#x7248;&#x672C;&#x7684;<a href="https://github.com/golang/glog" title="glog golang" target="_blank">glog</a>&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h3>
+<p>glog&#x4F9D;&#x8D56;&#x6807;&#x51C6;&#x5305;flag&#xFF0C;&#x5728;&#x8C03;&#x7528;glog&#x7684;&#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;<code>flag.Parse()</code>&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//create: 2017/12/25 14:24:03 change: 2017/12/25 15:08:49 lijiaocn@foxmail.com</span>
+<span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;flag&quot;</span>
+    <span class="hljs-string">&quot;github.com/golang/glog&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    flag.Parse()
+    glog.Infof(<span class="hljs-string">&quot;%s\n&quot;</span>, <span class="hljs-string">&quot;This is a info&quot;</span>)
+    glog.Warningf(<span class="hljs-string">&quot;%s\n&quot;</span>, <span class="hljs-string">&quot;This is a warning&quot;</span>)
+    glog.Errorf(<span class="hljs-string">&quot;%s\n&quot;</span>, <span class="hljs-string">&quot;This is a error&quot;</span>)
+    glog.V(<span class="hljs-number">1</span>).Infof(<span class="hljs-string">&quot;%s\n&quot;</span>, <span class="hljs-string">&quot;This is a v1 log&quot;</span>)
+    glog.V(<span class="hljs-number">2</span>).Infof(<span class="hljs-string">&quot;%s\n&quot;</span>, <span class="hljs-string">&quot;This is a v2 log&quot;</span>)
+    <span class="hljs-comment">//this call will make the progress exit.</span>
+    <span class="hljs-comment">//glog.Fatalf(&quot;%s\n&quot;, &quot;This is a fatal&quot;)</span>
+    <span class="hljs-comment">//this call will make the progress exit.</span>
+    <span class="hljs-comment">//glog.Exitf(&quot;%s\n&quot;, &quot;This is a exit&quot;)</span>
+}
+</code></pre>
+<h3 id="&#x8FD0;&#x884C;">&#x8FD0;&#x884C;</h3>
+<p>glog&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-bash">$ ./glog -h
+Usage of ./glog:
+  -alsologtostderr
+        <span class="hljs-built_in">log</span> to standard error as well as files
+  -log_backtrace_at value
+        when logging hits line file:N, emit a stack trace
+  -log_dir string
+        If non-empty, write <span class="hljs-built_in">log</span> files <span class="hljs-keyword">in</span> this directory
+  -logtostderr
+        <span class="hljs-built_in">log</span> to standard error instead of files
+  -stderrthreshold value
+        logs at or above this threshold go to stderr
+  -v value
+        <span class="hljs-built_in">log</span> level <span class="hljs-keyword">for</span> V logs
+  -vmodule value
+        comma-separated list of pattern=N settings <span class="hljs-keyword">for</span> file-filtered logging
+</code></pre>
+<p>glog&#x5C06;&#x65E5;&#x5FD7;&#x4EE5;&#x6587;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x5199;&#x5165;<code>-log_dir</code>&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4F7F;&#x7528;<code>-log_dir</code>&#x65F6;&#x53EA;&#x6709;ERROR&#x65E5;&#x5FD7;&#x4F1A;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#xFF0C;</p>
+<pre><code class="lang-bash">$ ./glog -log_dir=./<span class="hljs-built_in">log</span>
+E1225 15:19:10.514843   83246 main.go:13] This is a error
+</code></pre>
+<p>&#x751F;&#x6210;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-bash">lijiaos-MacBook-Pro:glog lijiao$ ls <span class="hljs-built_in">log</span>/
+glog.ERROR
+glog.INFO
+glog.WARNING
+glog.lijiaos-MacBook-Pro.lijiao.log.ERROR.20171225-151858.83190
+glog.lijiaos-MacBook-Pro.lijiao.log.ERROR.20171225-151910.83246
+glog.lijiaos-MacBook-Pro.lijiao.log.INFO.20171225-151858.83190
+glog.lijiaos-MacBook-Pro.lijiao.log.INFO.20171225-151910.83246
+glog.lijiaos-MacBook-Pro.lijiao.log.WARNING.20171225-151858.83190
+glog.lijiaos-MacBook-Pro.lijiao.log.WARNING.20171225-151910.83246
+</code></pre>
+<p>&#x53C2;&#x6570;<code>-logtostderr</code>&#x5C06;&#x6240;&#x6709;&#x65E5;&#x5FD7;&#x6253;&#x5370;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#xFF0C;&#x4E0D;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-bash">$ ./glog  -logtostderr
+I1225 15:22:11.770424   83995 main.go:11] This is a info
+W1225 15:22:11.770510   83995 main.go:12] This is a warning
+E1225 15:22:11.770513   83995 main.go:13] This is a error
+</code></pre>
+<p>&#x53C2;&#x6570;<code>-v</code>&#x6307;&#x5B9A;&#x65E5;&#x5FD7;&#x7684;&#x7EA7;&#x522B;&#xFF0C;&#x53EA;&#x6253;&#x5370;V(x)&#x4E2D;&#xFF0C;x&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;-v&#x6307;&#x5B9A;&#x7684;&#x6570;&#x503C;&#x7684;&#x65E5;&#x5FD7;&#x3002;</p>
+<pre><code class="lang-bash">$ ./glog  -logtostderr -v 1
+I1225 15:28:03.517261   85366 main.go:11] This is a info
+W1225 15:28:03.517335   85366 main.go:12] This is a warning
+E1225 15:28:03.517339   85366 main.go:13] This is a error
+I1225 15:28:03.517342   85366 main.go:14] This is a v1 <span class="hljs-built_in">log</span>
+</code></pre>
+<h3 id="&#x5EFA;&#x8BAE;">&#x5EFA;&#x8BAE;</h3>
+<p>&#x5FC5;&#x987B;&#x8981;&#x8BB0;&#x5F55;&#x7684;&#x65E5;&#x5FD7;&#x4F7F;&#x7528;<code>glog.InfoX</code>&#x3001;<code>glog.WarningX</code>&#x3001;<code>glog.ErrorX</code>&#x7B49;&#x51FD;&#x6570;&#x6253;&#x5370;&#x3002;</p>
+<p>&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x8C03;&#x8BD5;&#x7684;&#x65E5;&#x5FD7;&#x4F7F;&#x7528;<code>glov.V().InfoX</code>&#x6253;&#x5370;&#x3002;</p>
+<h3 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h3>
+<ol>
+<li><a href="https://github.com/golang/glog" title="glog golang" target="_blank">glog golang</a></li>
+<li><a href="https://github.com/google/glog" title="glog c++" target="_blank">glog c++</a></li>
+</ol>
+
+
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Page_Bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8176866190626448"
+     data-ad-slot="7945072540"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-cmdline.html" class="navigation navigation-prev " aria-label="Previous page: 命令行参数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter04/00-about.html" class="navigation navigation-next " aria-label="Next page: 第四章 项目管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"日志打印","level":"1.5.2","depth":2,"next":{"title":"第四章 项目管理","level":"1.6","depth":1,"path":"chapter04/00-about.md","ref":"./chapter04/00-about.md","articles":[{"title":"依赖代码管理","level":"1.6.1","depth":2,"path":"chapter04/01-dependency.md","ref":"./chapter04/01-dependency.md","articles":[]}]},"previous":{"title":"命令行参数","level":"1.5.1","depth":2,"path":"chapter03/01-cmdline.md","ref":"./chapter03/01-cmdline.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter03/02-log.md","mtime":"2018-12-01T08:54:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T08:29:51.793Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
