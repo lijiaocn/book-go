@@ -6,4 +6,4 @@
 # Distributed under terms of the GPL license.
 #
 
-nohup gitbook serve --port 4001 2>&1 >/tmp/book-go.log &
+nohup gitbook serve --port 4003 2>&1 >/tmp/handbook-go.log &
