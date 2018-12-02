@@ -11,8 +11,8 @@ description:
 
 ---
 
-* auto-gen TOC:
-{:toc}
+
+<!-- toc -->
 
 # go语言的词法规则
 

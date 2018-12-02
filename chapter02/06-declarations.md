@@ -11,8 +11,8 @@ description:
 
 ---
 
-* auto-gen TOC:
-{:toc}
+
+<!-- toc -->
 
 # 代码区块、声明、声明作用域名
 

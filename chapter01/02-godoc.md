@@ -1,18 +1,4 @@
----
-layout: default
-title: 02-godoc
-author: lijiaocn
-createdate: 2017/12/16 15:39:52
-changedate: 2017/12/16 16:44:54
-categories:
-tags:
-keywords:
-description: 
-
----
-
-* auto-gen TOC:
-{:toc}
+<!-- toc -->
 
 # 使用godoc
 

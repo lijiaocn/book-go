@@ -11,8 +11,8 @@ description:
 
 ---
 
-* auto-gen TOC:
-{:toc}
+
+<!-- toc -->
 
 # 操作系统相关
 

@@ -1,15 +1,4 @@
----
-layout: default
-title: 01-install
-author: lijiaocn
-createdate: 2017/12/16 15:39:52
-changedate: 2017/12/16 16:24:54
-categories:
-tags:
-keywords:
-description: 
-
----
+<!-- toc -->
 
 # 安装Go
 

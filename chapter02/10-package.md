@@ -11,8 +11,8 @@ description:
 
 ---
 
-* auto-gen TOC:
-{:toc}
+
+<!-- toc -->
 
 # go的包管理语句
 

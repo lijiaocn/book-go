@@ -11,8 +11,8 @@ description:
 
 ---
 
-* auto-gen TOC:
-{:toc}
+
+<!-- toc -->
 
 # go的错误处理
 

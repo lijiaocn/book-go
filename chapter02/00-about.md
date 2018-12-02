@@ -1,18 +1,4 @@
----
-layout: default
-title: 00-about
-author: lijiaocn
-createdate: 2017/12/16 16:50:47
-changedate: 2017/12/16 17:11:41
-categories:
-tags:
-keywords:
-description: 
-
----
-
-* auto-gen TOC:
-{:toc}
+<!-- toc -->
 
 # 第二章 语法概览 
 
