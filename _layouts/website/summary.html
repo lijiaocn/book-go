@@ -32,6 +32,9 @@
     {% if config.links.sidebar  %}
     {% for linkTitle, link in config.links.sidebar  %}
         {% set _divider = true %}
+        <li>
+            <a href="{{ link }}" target="_blank" class="custom-link">{{ linkTitle }}</a>
+        </li>
     {% endfor %}
     {% endif %}
 
