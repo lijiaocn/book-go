@@ -1,4 +1,8 @@
 {% extends template.self %}
+{% block title %}
+{{ config.title|d("Go语言简明手册", true) }}
+{% endblock %}
+
 {% block head %}
     {{ super() }}
 <!--Google ads -->
