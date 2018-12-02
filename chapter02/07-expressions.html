@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -589,10 +593,34 @@ var _hmt = _hmt || [];
 </div-->
 
 
+<!-- toc -->
 <ul>
-<li>auto-gen TOC:
-{:toc}</li>
+<li><a href="#&#x8868;&#x8FBE;&#x5F0F;expressions-&#x4E0E;&#x8FD0;&#x7B97;&#x7B26;operator">&#x8868;&#x8FBE;&#x5F0F;(Expressions) &#x4E0E;&#x8FD0;&#x7B97;&#x7B26;(Operator)</a><ul>
+<li><a href="#&#x8868;&#x8FBE;&#x5F0F;">&#x8868;&#x8FBE;&#x5F0F;</a><ul>
+<li><a href="#&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;constant-expressions">&#x5E38;&#x91CF;&#x8868;&#x8FBE;&#x5F0F;(Constant expressions)</a></li>
+<li><a href="#&#x9009;&#x62E9;&#x8868;&#x8FBE;&#x5F0F;selector">&#x9009;&#x62E9;&#x8868;&#x8FBE;&#x5F0F;(Selector)</a></li>
+<li><a href="#&#x65B9;&#x6CD5;&#x8868;&#x8FBE;&#x5F0F;method-expressions">&#x65B9;&#x6CD5;&#x8868;&#x8FBE;&#x5F0F;(Method expressions)</a></li>
+<li><a href="#&#x7D22;&#x5F15;&#x8868;&#x8FBE;&#x5F0F;index-expressions">&#x7D22;&#x5F15;&#x8868;&#x8FBE;&#x5F0F;(Index expressions)</a></li>
+<li><a href="#&#x5206;&#x7247;&#x8868;&#x8FBE;&#x5F0F;slice-expressions">&#x5206;&#x7247;&#x8868;&#x8FBE;&#x5F0F;(Slice expressions)</a></li>
+<li><a href="#&#x5B8C;&#x6574;&#x5206;&#x7247;&#x8868;&#x8FBE;&#x5F0F;full-slice-expressions">&#x5B8C;&#x6574;&#x5206;&#x7247;&#x8868;&#x8FBE;&#x5F0F;(Full slice expressions)</a></li>
+<li><a href="#&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x8868;&#x8FBE;&#x5F0F;type-assertions-expressions">&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x8868;&#x8FBE;&#x5F0F;(Type assertions expressions)</a></li>
+<li><a href="#&#x8C03;&#x7528;&#x8868;&#x8FBE;&#x5F0F;call-expressions">&#x8C03;&#x7528;&#x8868;&#x8FBE;&#x5F0F;(Call expressions)</a></li>
 </ul>
+</li>
+<li><a href="#&#x8FD0;&#x7B97;&#x7B26;operator">&#x8FD0;&#x7B97;&#x7B26;(Operator)</a><ul>
+<li><a href="#&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;arithmetic-operators">&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;(Arithmetic operators)</a></li>
+<li><a href="#&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;string-concatenation">&#x5B57;&#x7B26;&#x4E32;&#x62FC;&#x63A5;(String concatenation)</a></li>
+<li><a href="#&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;comparison-operators">&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;(Comparison operators)</a></li>
+<li><a href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;logical-operators">&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;(Logical operators)</a></li>
+<li><a href="#&#x5730;&#x5740;&#x8FD0;&#x7B97;&#x7B26;address-operators">&#x5730;&#x5740;&#x8FD0;&#x7B97;&#x7B26;(Address operators)</a></li>
+<li><a href="#&#x8BFB;&#x53D6;&#x8FD0;&#x7B97;&#x7B26;receive-operator">&#x8BFB;&#x53D6;&#x8FD0;&#x7B97;&#x7B26;(Receive operator)</a></li>
+<li><a href="#&#x7C7B;&#x578B;&#x8F6C;&#x6362;conversions">&#x7C7B;&#x578B;&#x8F6C;&#x6362;(Conversions)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
 <h1 id="&#x8868;&#x8FBE;&#x5F0F;expressions-&#x4E0E;&#x8FD0;&#x7B97;&#x7B26;operator">&#x8868;&#x8FBE;&#x5F0F;(Expressions) &#x4E0E;&#x8FD0;&#x7B97;&#x7B26;(Operator)</h1>
 <h2 id="&#x8868;&#x8FBE;&#x5F0F;">&#x8868;&#x8FBE;&#x5F0F;</h2>
 <p>&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x7528;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x51FD;&#x6570;&#x7684;&#x63CF;&#x8FF0;&#x7684;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x3002;</p>
@@ -870,7 +898,7 @@ f(&lt;-ch)
 &lt;-strobe  // wait until clock pulse and discard received value
 </code></pre><h3 id="&#x7C7B;&#x578B;&#x8F6C;&#x6362;conversions">&#x7C7B;&#x578B;&#x8F6C;&#x6362;(Conversions)</h3>
 <pre><code>Conversion = Type &quot;(&quot; Expression [ &quot;,&quot; ] &quot;)&quot; .
-</code></pre>
+</code></pre><script type="text/javascript">var className='atoc';</script>
 
 <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -929,7 +957,7 @@ f(&lt;-ch)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"createdate":"2017/12/20 16:38:41","layout":"default","keywords":null,"author":"lijiaocn","title":"表达式","tags":null,"categories":null,"description":null,"changedate":"2017/12/21 19:21:00","level":"1.4.7","depth":2,"next":{"title":"语句","level":"1.4.8","depth":2,"path":"chapter02/08-statements.md","ref":"./chapter02/08-statements.md","articles":[]},"previous":{"title":"声明","level":"1.4.6","depth":2,"path":"chapter02/06-declarations.md","ref":"./chapter02/06-declarations.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/07-expressions.md","mtime":"2018-12-01T08:59:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T09:23:18.769Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"createdate":"2017/12/20 16:38:41","layout":"default","keywords":null,"author":"lijiaocn","title":"表达式","tags":null,"categories":null,"description":null,"changedate":"2017/12/21 19:21:00","level":"1.4.7","depth":2,"next":{"title":"语句","level":"1.4.8","depth":2,"path":"chapter02/08-statements.md","ref":"./chapter02/08-statements.md","articles":[]},"previous":{"title":"声明","level":"1.4.6","depth":2,"path":"chapter02/06-declarations.md","ref":"./chapter02/06-declarations.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["atoc","livereload"],"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/07-expressions.md","mtime":"2018-12-02T07:47:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T07:45:28.487Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -937,6 +965,10 @@ f(&lt;-ch)
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>

@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -589,10 +593,36 @@ var _hmt = _hmt || [];
 </div-->
 
 
+<!-- toc -->
 <ul>
-<li>auto-gen TOC:
-{:toc}</li>
+<li><a href="#go&#x7684;&#x7C7B;&#x578B;">go&#x7684;&#x7C7B;&#x578B;</a><ul>
+<li><a href="#&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;">&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;</a><ul>
+<li><a href="#&#x5185;&#x7F6E;&#x7C7B;&#x578B;predeclared">&#x5185;&#x7F6E;&#x7C7B;&#x578B;(predeclared)</a></li>
+<li><a href="#&#x547D;&#x540D;&#x7C7B;&#x578B;named">&#x547D;&#x540D;&#x7C7B;&#x578B;(named)</a></li>
+<li><a href="#&#x5B9E;&#x9645;&#x7C7B;&#x578B;underlying-type">&#x5B9E;&#x9645;&#x7C7B;&#x578B;(underlying type)</a></li>
+<li><a href="#&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;method-sets">&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;(method sets)</a></li>
+<li><a href="#&#x7C7B;&#x578B;&#x7684;&#x7B49;&#x540C;&#x6027;identical">&#x7C7B;&#x578B;&#x7684;&#x7B49;&#x540C;&#x6027;(identical)</a></li>
+<li><a href="#&#x7C7B;&#x578B;&#x7684;&#x8D4B;&#x503C;assignability">&#x7C7B;&#x578B;&#x7684;&#x8D4B;&#x503C;(Assignability)</a></li>
 </ul>
+</li>
+<li><a href="#go&#x652F;&#x6301;&#x7684;&#x7C7B;&#x578B;">go&#x652F;&#x6301;&#x7684;&#x7C7B;&#x578B;</a><ul>
+<li><a href="#&#x5E03;&#x5C14;boolean-types">&#x5E03;&#x5C14;(Boolean types)</a></li>
+<li><a href="#&#x6570;&#x503C;numeric-types">&#x6570;&#x503C;(Numeric types)</a></li>
+<li><a href="#&#x5B57;&#x7B26;&#x4E32;string-types">&#x5B57;&#x7B26;&#x4E32;(String types)</a></li>
+<li><a href="#&#x6570;&#x7EC4;array-types">&#x6570;&#x7EC4;(Array types)</a></li>
+<li><a href="#&#x5206;&#x7247;slice-types">&#x5206;&#x7247;(Slice types)</a></li>
+<li><a href="#&#x7ED3;&#x6784;&#x4F53;struct-types">&#x7ED3;&#x6784;&#x4F53;(Struct types)</a></li>
+<li><a href="#&#x6307;&#x9488;pointer-types">&#x6307;&#x9488;(Pointer types)</a></li>
+<li><a href="#&#x51FD;&#x6570;function-types">&#x51FD;&#x6570;(Function types)</a></li>
+<li><a href="#&#x63A5;&#x53E3;interface-types">&#x63A5;&#x53E3;(Interface types)</a></li>
+<li><a href="#&#x5B57;&#x5178;map-types">&#x5B57;&#x5178;(Map types)</a></li>
+<li><a href="#&#x901A;&#x9053;channel-types">&#x901A;&#x9053;(Channel types)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
 <h1 id="go&#x7684;&#x7C7B;&#x578B;">go&#x7684;&#x7C7B;&#x578B;</h1>
 <p>&#x7C7B;&#x578B;&#x662F;&#x7528;&#x6765;&#x8BE0;&#x91CA;&#x5982;&#x4F55;&#x89E3;&#x8BFB;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E2D;&#x5B58;&#x653E;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x53CA;&#x7EA6;&#x5B9A;&#x64CD;&#x4F5C;&#x7B26;&#x7684;&#x542B;&#x4E49;&#x7684;&#x3002;</p>
 <h2 id="&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;">&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;</h2>
@@ -1148,7 +1178,7 @@ chan (&lt;-chan int)
 <pre><code>x, ok := &lt;-c
 </code></pre><p>&#x901A;&#x9053;&#x662F;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x51FD;&#x6570;len&#x8BFB;&#x53D6;&#x901A;&#x9053;&#x4E2D;&#x7F13;&#x5B58;&#x7684;&#x6570;&#x636E;&#x4E2A;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x7528;cap&#x8BFB;&#x53D6;&#x901A;&#x9053;&#x5BB9;&#x91CF;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8003;&#x8651;&#x5E76;&#x53D1;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
 <p>&#x53E6;&#x5916;&#x901A;&#x9053;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x9075;&#x5FAA;&#x5148;&#x5165;&#x5148;&#x51FA;&#x7684;&#x89C4;&#x5219;&#x3002;</p>
-
+<script type="text/javascript">var className='atoc';</script>
 
 <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -1207,7 +1237,7 @@ chan (&lt;-chan int)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"createdate":"2017/12/18 10:55:10","layout":"default","keywords":null,"author":"lijiaocn","title":"类型","tags":null,"categories":null,"description":null,"changedate":"2017/12/20 11:11:51","level":"1.4.5","depth":2,"next":{"title":"声明","level":"1.4.6","depth":2,"path":"chapter02/06-declarations.md","ref":"./chapter02/06-declarations.md","articles":[]},"previous":{"title":"变量","level":"1.4.4","depth":2,"path":"chapter02/04-variables.md","ref":"./chapter02/04-variables.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/05-types.md","mtime":"2018-12-01T08:59:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T09:23:18.769Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"createdate":"2017/12/18 10:55:10","layout":"default","keywords":null,"author":"lijiaocn","title":"类型","tags":null,"categories":null,"description":null,"changedate":"2017/12/20 11:11:51","level":"1.4.5","depth":2,"next":{"title":"声明","level":"1.4.6","depth":2,"path":"chapter02/06-declarations.md","ref":"./chapter02/06-declarations.md","articles":[]},"previous":{"title":"变量","level":"1.4.4","depth":2,"path":"chapter02/04-variables.md","ref":"./chapter02/04-variables.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["atoc","livereload"],"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/05-types.md","mtime":"2018-12-02T07:47:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T07:45:28.487Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1215,6 +1245,10 @@ chan (&lt;-chan int)
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>

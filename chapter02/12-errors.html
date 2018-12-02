@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -589,10 +593,15 @@ var _hmt = _hmt || [];
 </div-->
 
 
+<!-- toc -->
 <ul>
-<li>auto-gen TOC:
-{:toc}</li>
+<li><a href="#go&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;">go&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;</a><ul>
+<li><a href="#&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#x503C;">&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#x503C;</a></li>
+<li><a href="#panic&#x7684;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7C7B;&#x578B;">panic&#x7684;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7C7B;&#x578B;</a></li>
 </ul>
+</li>
+</ul>
+<!-- tocstop -->
 <h1 id="go&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;">go&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;</h1>
 <h2 id="&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#x503C;">&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#x503C;</h2>
 <pre><code>type error interface {
@@ -605,7 +614,7 @@ type Error interface {
     error
     // and perhaps other methods
 }
-</code></pre>
+</code></pre><script type="text/javascript">var className='atoc';</script>
 
 <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -664,7 +673,7 @@ type Error interface {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"createdate":"2017/12/22 00:33:14","layout":"default","keywords":null,"author":"lijiaocn","title":"错误处理","tags":null,"categories":null,"description":null,"changedate":"2017/12/22 00:38:17","level":"1.4.12","depth":2,"next":{"title":"系统相关","level":"1.4.13","depth":2,"path":"chapter02/13-system.md","ref":"./chapter02/13-system.md","articles":[]},"previous":{"title":"初始化","level":"1.4.11","depth":2,"path":"chapter02/11-initialization.md","ref":"./chapter02/11-initialization.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/12-errors.md","mtime":"2018-12-01T08:59:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T09:23:18.769Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"createdate":"2017/12/22 00:33:14","layout":"default","keywords":null,"author":"lijiaocn","title":"错误处理","tags":null,"categories":null,"description":null,"changedate":"2017/12/22 00:38:17","level":"1.4.12","depth":2,"next":{"title":"系统相关","level":"1.4.13","depth":2,"path":"chapter02/13-system.md","ref":"./chapter02/13-system.md","articles":[]},"previous":{"title":"初始化","level":"1.4.11","depth":2,"path":"chapter02/11-initialization.md","ref":"./chapter02/11-initialization.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["atoc","livereload"],"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/12-errors.md","mtime":"2018-12-02T07:47:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T07:45:28.487Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -672,6 +681,10 @@ type Error interface {
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>

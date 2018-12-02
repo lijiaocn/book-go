@@ -17,6 +17,10 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -589,10 +593,25 @@ var _hmt = _hmt || [];
 </div-->
 
 
+<!-- toc -->
 <ul>
-<li>auto-gen TOC:
-{:toc}</li>
+<li><a href="#&#x4EE3;&#x7801;&#x533A;&#x5757;&#x3001;&#x58F0;&#x660E;&#x3001;&#x58F0;&#x660E;&#x4F5C;&#x7528;&#x57DF;&#x540D;">&#x4EE3;&#x7801;&#x533A;&#x5757;&#x3001;&#x58F0;&#x660E;&#x3001;&#x58F0;&#x660E;&#x4F5C;&#x7528;&#x57DF;&#x540D;</a><ul>
+<li><a href="#&#x4EE3;&#x7801;&#x533A;&#x5757;blocks">&#x4EE3;&#x7801;&#x533A;&#x5757;(blocks)</a></li>
+<li><a href="#&#x58F0;&#x660E;&#x7684;&#x4F5C;&#x7528;&#x57DF;declarations-and-scope">&#x58F0;&#x660E;&#x7684;&#x4F5C;&#x7528;&#x57DF;(Declarations and scope)</a></li>
+<li><a href="#&#x6807;&#x8BB0;&#x4F5C;&#x7528;&#x57DF;label-scopes">&#x6807;&#x8BB0;&#x4F5C;&#x7528;&#x57DF;(Label scopes)</a></li>
+<li><a href="#&#x5185;&#x7F6E;&#x7684;&#x6807;&#x8BB0;&#x7B26;">&#x5185;&#x7F6E;&#x7684;&#x6807;&#x8BB0;&#x7B26;</a></li>
+<li><a href="#&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x5BFC;&#x51FA;exported-identifiers">&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x5BFC;&#x51FA;(Exported identifiers)</a></li>
+<li><a href="#&#x6807;&#x8BB0;&#x7B26;&#x7684;&#x552F;&#x4E00;&#x6027;uniqueness-of-identifiers">&#x6807;&#x8BB0;&#x7B26;&#x7684;&#x552F;&#x4E00;&#x6027;(Uniqueness of identifiers)</a></li>
+<li><a href="#&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;constant-declarations">&#x5E38;&#x91CF;&#x7684;&#x58F0;&#x660E;(Constant declarations)</a></li>
+<li><a href="#&#x7C7B;&#x578B;&#x58F0;&#x660E;">&#x7C7B;&#x578B;&#x58F0;&#x660E;</a></li>
+<li><a href="#&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;variable-declarations">&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;(Variable declarations)</a></li>
+<li><a href="#&#x53D8;&#x91CF;&#x7684;&#x7B80;&#x5355;&#x58F0;&#x660E;short-variable-declarations">&#x53D8;&#x91CF;&#x7684;&#x7B80;&#x5355;&#x58F0;&#x660E;(Short variable declarations)</a></li>
+<li><a href="#&#x51FD;&#x6570;&#x7684;&#x58F0;&#x660E;function-declarations">&#x51FD;&#x6570;&#x7684;&#x58F0;&#x660E;(Function declarations)</a></li>
+<li><a href="#&#x65B9;&#x6CD5;&#x7684;&#x58F0;&#x660E;method-declarations">&#x65B9;&#x6CD5;&#x7684;&#x58F0;&#x660E;(Method declarations)</a></li>
 </ul>
+</li>
+</ul>
+<!-- tocstop -->
 <h1 id="&#x4EE3;&#x7801;&#x533A;&#x5757;&#x3001;&#x58F0;&#x660E;&#x3001;&#x58F0;&#x660E;&#x4F5C;&#x7528;&#x57DF;&#x540D;">&#x4EE3;&#x7801;&#x533A;&#x5757;&#x3001;&#x58F0;&#x660E;&#x3001;&#x58F0;&#x660E;&#x4F5C;&#x7528;&#x57DF;&#x540D;</h1>
 <p>&#x58F0;&#x660E;&#x7684;&#x5F71;&#x54CD;&#x662F;&#x6709;&#x8303;&#x56F4;&#x7684;&#xFF0C;&#x5B83;&#x7684;&#x5F71;&#x54CD;&#x8303;&#x56F4;&#x53EB;&#x505A;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x4F5C;&#x7528;&#x57DF;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x4EE3;&#x7801;&#x533A;&#x5757;&#x3002;</p>
 <h2 id="&#x4EE3;&#x7801;&#x533A;&#x5757;blocks">&#x4EE3;&#x7801;&#x533A;&#x5757;(blocks)</h2>
@@ -814,7 +833,7 @@ func (p *Point) Scale(factor float64) {
 }
 </code></pre><p>&#x65B9;&#x6CD5;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#x4E0A;&#x9762;&#x58F0;&#x660E;&#x7684;&#x65B9;&#x6CD5;Scale&#xFF0C;&#x5B83;&#x7684;&#x7C7B;&#x578B;&#x662F;&#xFF1A;</p>
 <pre><code>func(p *Point, factor float64)
-</code></pre>
+</code></pre><script type="text/javascript">var className='atoc';</script>
 
 <div>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -873,7 +892,7 @@ func (p *Point) Scale(factor float64) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"createdate":"2017/12/20 11:12:59","layout":"default","keywords":null,"author":"lijiaocn","title":"声明","tags":null,"categories":null,"description":null,"changedate":"2017/12/20 16:37:07","level":"1.4.6","depth":2,"next":{"title":"表达式","level":"1.4.7","depth":2,"path":"chapter02/07-expressions.md","ref":"./chapter02/07-expressions.md","articles":[]},"previous":{"title":"类型","level":"1.4.5","depth":2,"path":"chapter02/05-types.md","ref":"./chapter02/05-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/06-declarations.md","mtime":"2018-12-01T08:59:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T09:23:18.769Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"createdate":"2017/12/20 11:12:59","layout":"default","keywords":null,"author":"lijiaocn","title":"声明","tags":null,"categories":null,"description":null,"changedate":"2017/12/20 16:37:07","level":"1.4.6","depth":2,"next":{"title":"表达式","level":"1.4.7","depth":2,"path":"chapter02/07-expressions.md","ref":"./chapter02/07-expressions.md","articles":[]},"previous":{"title":"类型","level":"1.4.5","depth":2,"path":"chapter02/05-types.md","ref":"./chapter02/05-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["atoc","livereload"],"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/06-declarations.md","mtime":"2018-12-02T07:47:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-02T07:45:28.487Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -881,6 +900,10 @@ func (p *Point) Scale(factor float64) {
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
