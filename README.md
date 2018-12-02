@@ -1,3 +1,4 @@
+<!-- toc -->
 # Go语言简明手册
 
 ## 本书的目的
@@ -26,9 +27,7 @@
 
 ## 阅读
 
-可以访问gitbook生成的页面：[https://go.lijiaocn.com](https://go.lijiaocn.com)
-
-可以直接阅读github上的文件：[Summary](./SUMMARY.md)
+阅读网址是：[https://www.lijiaocn.com/go/](https://www.lijiaocn.com/go/)
 
 本书中的一些链接指向的本地运行的godoc，如果要打开这些连接，需要在本地运行：
 
