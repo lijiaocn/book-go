@@ -1,6 +1,5 @@
 # 目录
 
-* [返回博客首页](https://www.lijiaocn.com)
 * [关于这本书]( ./README.md )
 * [第一章 准备环境]( ./chapter01/00-about.md ) 
 	* [安装go]( ./chapter01/01-install.md )
@@ -26,4 +25,3 @@
     * [日志打印]( ./chapter03/02-log.md )
 * [第四章 项目管理]( ./chapter04/00-about.md )
     * [依赖代码管理]( ./chapter04/01-dependency.md )
-
