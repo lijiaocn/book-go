@@ -26,9 +26,11 @@ description:
 
 go语言使用的编码是utf-8，用go语言写的源代码是utf-8编码的文本文件。
 
-## 构成要素：字符(Characters)、字母(Letters)、数字(Digits)
+## 构成要素
 
 英语单词的构成要素是字母，汉语词语的构成要素是字，go语言词汇的构成要素是字符。
+
+字符(Characters)、字母(Letters)、数字(Digits)
 
 ### 字符(Characters)
 
