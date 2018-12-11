@@ -1,9 +1,16 @@
 #! /bin/sh
 #
-# run.sh
+# push.sh
 # Copyright (C) 2018 lijiaocn <lijiaocn@foxmail.com>
 #
 # Distributed under terms of the GPL license.
 #
 
-nohup gitbook serve --port 4003 --lrport 35731 2>&1 >/tmp/handbook-go.log &
+
+git checkout gh-pages
+cp -rf _book/* .
+git add .
+git commit -m "m"
+git push 
+git checkout master
+./run.sh
